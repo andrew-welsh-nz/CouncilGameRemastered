@@ -1,0 +1,1003 @@
+fileFormatVersion: 2
+guid: ffa67911a25603f48bc88bdd0839e37b
+timeCreated: 1486869794
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Base
+    100002: character_locator
+    100004: Chin
+    100006: Clavicle
+    100008: Forehead
+    100010: Forehead1
+    100012: Left_Ankle
+    100014: Left_Arm_Segment_Mid
+    100016: Left_Arm_Segment_Top
+    100018: Left_Eyebrow_Bottom
+    100020: Left_Eyebrow_Mid
+    100022: Left_Eyebrow_Upper
+    100024: Left_Index_Lower
+    100026: Left_Index_Mid
+    100028: Left_Index_Tip
+    100030: Left_Index_Upper
+    100032: Left_Knee
+    100034: Left_Middle_Lower
+    100036: Left_Middle_Mid
+    100038: Left_Middle_Tip
+    100040: Left_Middle_Upper
+    100042: Left_Pinky_Lower
+    100044: Left_Pinky_Mid
+    100046: Left_Pinky_Tip
+    100048: Left_Pinky_Upper
+    100050: Left_Thigh
+    100052: Left_Thumb_Mid
+    100054: Left_Thumb_Tip
+    100056: Left_Thumb_Upper
+    100058: Left_Toes
+    100060: Left_Wrist
+    100062: Neck
+    100064: Right_Ankle
+    100066: Right_Arm_Segment_Mid
+    100068: Right_Arm_Segment_Top
+    100070: Right_Eyebrow_Bottom
+    100072: Right_Eyebrow_Mid
+    100074: Right_Eyebrow_Upper
+    100076: Right_Index_Lower
+    100078: Right_Index_Mid
+    100080: Right_Index_Tip
+    100082: Right_Index_Upper
+    100084: Right_Knee
+    100086: Right_Middle_Lower
+    100088: Right_Middle_Mid
+    100090: Right_Middle_Tip
+    100092: Right_Middle_Upper
+    100094: Right_Pinky_Lower
+    100096: Right_Pinky_Mid
+    100098: Right_Pinky_Tip
+    100100: Right_Pinky_Upper
+    100102: Right_Thigh
+    100104: Right_Thumb_Mid
+    100106: Right_Thumb_Tip
+    100108: Right_Thumb_Upper
+    100110: Right_Toes
+    100112: Right_Wrist
+    100114: Shoulder_Left
+    100116: Shoulder_Right
+    100118: Skull_Base
+    100120: Skull_Top
+    100122: sm_character
+    100124: //RootNode
+    100126: Spine_Lower
+    100128: Spine_Mid
+    400000: Base
+    400002: character_locator
+    400004: Chin
+    400006: Clavicle
+    400008: Forehead
+    400010: Forehead1
+    400012: Left_Ankle
+    400014: Left_Arm_Segment_Mid
+    400016: Left_Arm_Segment_Top
+    400018: Left_Eyebrow_Bottom
+    400020: Left_Eyebrow_Mid
+    400022: Left_Eyebrow_Upper
+    400024: Left_Index_Lower
+    400026: Left_Index_Mid
+    400028: Left_Index_Tip
+    400030: Left_Index_Upper
+    400032: Left_Knee
+    400034: Left_Middle_Lower
+    400036: Left_Middle_Mid
+    400038: Left_Middle_Tip
+    400040: Left_Middle_Upper
+    400042: Left_Pinky_Lower
+    400044: Left_Pinky_Mid
+    400046: Left_Pinky_Tip
+    400048: Left_Pinky_Upper
+    400050: Left_Thigh
+    400052: Left_Thumb_Mid
+    400054: Left_Thumb_Tip
+    400056: Left_Thumb_Upper
+    400058: Left_Toes
+    400060: Left_Wrist
+    400062: Neck
+    400064: Right_Ankle
+    400066: Right_Arm_Segment_Mid
+    400068: Right_Arm_Segment_Top
+    400070: Right_Eyebrow_Bottom
+    400072: Right_Eyebrow_Mid
+    400074: Right_Eyebrow_Upper
+    400076: Right_Index_Lower
+    400078: Right_Index_Mid
+    400080: Right_Index_Tip
+    400082: Right_Index_Upper
+    400084: Right_Knee
+    400086: Right_Middle_Lower
+    400088: Right_Middle_Mid
+    400090: Right_Middle_Tip
+    400092: Right_Middle_Upper
+    400094: Right_Pinky_Lower
+    400096: Right_Pinky_Mid
+    400098: Right_Pinky_Tip
+    400100: Right_Pinky_Upper
+    400102: Right_Thigh
+    400104: Right_Thumb_Mid
+    400106: Right_Thumb_Tip
+    400108: Right_Thumb_Upper
+    400110: Right_Toes
+    400112: Right_Wrist
+    400114: Shoulder_Left
+    400116: Shoulder_Right
+    400118: Skull_Base
+    400120: Skull_Top
+    400122: sm_character
+    400124: //RootNode
+    400126: Spine_Lower
+    400128: Spine_Mid
+    4300000: sm_character
+    7400000: idle
+    7400002: idle hold
+    7400004: run hold
+    7400006: run
+    7400008: attack
+    9500000: //RootNode
+    13700000: sm_character
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: idle
+      takeName: Take 001
+      firstFrame: 62
+      lastFrame: 119
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: character_locator
+        weight: 1
+      - path: character_locator/Base
+        weight: 1
+      - path: character_locator/Base/Spine_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Left_Thigh
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Left_Thigh/Left_Knee
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Left_Thigh/Left_Knee/Left_Ankle
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Left_Thigh/Left_Knee/Left_Ankle/Left_Toes
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Right_Thigh
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Right_Thigh/Right_Knee
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Right_Thigh/Right_Knee/Right_Ankle
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Right_Thigh/Right_Knee/Right_Ankle/Right_Toes
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead/Right_Eyebrow_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead/Right_Eyebrow_Upper/Right_Eyebrow_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead/Right_Eyebrow_Upper/Right_Eyebrow_Mid/Right_Eyebrow_Bottom
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead1
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead1/Left_Eyebrow_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead1/Left_Eyebrow_Upper/Left_Eyebrow_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead1/Left_Eyebrow_Upper/Left_Eyebrow_Mid/Left_Eyebrow_Bottom
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Index_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Index_Upper/Left_Index_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Index_Upper/Left_Index_Mid/Left_Index_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Index_Upper/Left_Index_Mid/Left_Index_Lower/Left_Index_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Middle_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Middle_Upper/Left_Middle_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Middle_Upper/Left_Middle_Mid/Left_Middle_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Middle_Upper/Left_Middle_Mid/Left_Middle_Lower/Left_Middle_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Pinky_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Pinky_Upper/Left_Pinky_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Pinky_Upper/Left_Pinky_Mid/Left_Pinky_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Pinky_Upper/Left_Pinky_Mid/Left_Pinky_Lower/Left_Pinky_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Thumb_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Thumb_Upper/Left_Thumb_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Thumb_Upper/Left_Thumb_Mid/Left_Thumb_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Index_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Index_Upper/Right_Index_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Index_Upper/Right_Index_Mid/Right_Index_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Index_Upper/Right_Index_Mid/Right_Index_Lower/Right_Index_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Middle_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Middle_Upper/Right_Middle_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Middle_Upper/Right_Middle_Mid/Right_Middle_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Middle_Upper/Right_Middle_Mid/Right_Middle_Lower/Right_Middle_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Pinky_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Pinky_Upper/Right_Pinky_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Pinky_Upper/Right_Pinky_Mid/Right_Pinky_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Pinky_Upper/Right_Pinky_Mid/Right_Pinky_Lower/Right_Pinky_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Thumb_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Thumb_Upper/Right_Thumb_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Thumb_Upper/Right_Thumb_Mid/Right_Thumb_Tip
+        weight: 1
+      - path: sm_character
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle hold
+      takeName: Take 001
+      firstFrame: 223
+      lastFrame: 280
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: character_locator
+        weight: 1
+      - path: character_locator/Base
+        weight: 1
+      - path: character_locator/Base/Spine_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Left_Thigh
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Left_Thigh/Left_Knee
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Left_Thigh/Left_Knee/Left_Ankle
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Left_Thigh/Left_Knee/Left_Ankle/Left_Toes
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Right_Thigh
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Right_Thigh/Right_Knee
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Right_Thigh/Right_Knee/Right_Ankle
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Right_Thigh/Right_Knee/Right_Ankle/Right_Toes
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead/Right_Eyebrow_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead/Right_Eyebrow_Upper/Right_Eyebrow_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead/Right_Eyebrow_Upper/Right_Eyebrow_Mid/Right_Eyebrow_Bottom
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead1
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead1/Left_Eyebrow_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead1/Left_Eyebrow_Upper/Left_Eyebrow_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead1/Left_Eyebrow_Upper/Left_Eyebrow_Mid/Left_Eyebrow_Bottom
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Index_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Index_Upper/Left_Index_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Index_Upper/Left_Index_Mid/Left_Index_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Index_Upper/Left_Index_Mid/Left_Index_Lower/Left_Index_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Middle_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Middle_Upper/Left_Middle_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Middle_Upper/Left_Middle_Mid/Left_Middle_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Middle_Upper/Left_Middle_Mid/Left_Middle_Lower/Left_Middle_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Pinky_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Pinky_Upper/Left_Pinky_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Pinky_Upper/Left_Pinky_Mid/Left_Pinky_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Pinky_Upper/Left_Pinky_Mid/Left_Pinky_Lower/Left_Pinky_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Thumb_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Thumb_Upper/Left_Thumb_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Thumb_Upper/Left_Thumb_Mid/Left_Thumb_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Index_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Index_Upper/Right_Index_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Index_Upper/Right_Index_Mid/Right_Index_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Index_Upper/Right_Index_Mid/Right_Index_Lower/Right_Index_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Middle_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Middle_Upper/Right_Middle_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Middle_Upper/Right_Middle_Mid/Right_Middle_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Middle_Upper/Right_Middle_Mid/Right_Middle_Lower/Right_Middle_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Pinky_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Pinky_Upper/Right_Pinky_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Pinky_Upper/Right_Pinky_Mid/Right_Pinky_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Pinky_Upper/Right_Pinky_Mid/Right_Pinky_Lower/Right_Pinky_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Thumb_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Thumb_Upper/Right_Thumb_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Thumb_Upper/Right_Thumb_Mid/Right_Thumb_Tip
+        weight: 1
+      - path: sm_character
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: run
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 58
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: character_locator
+        weight: 1
+      - path: character_locator/Base
+        weight: 1
+      - path: character_locator/Base/Spine_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Left_Thigh
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Left_Thigh/Left_Knee
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Left_Thigh/Left_Knee/Left_Ankle
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Left_Thigh/Left_Knee/Left_Ankle/Left_Toes
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Right_Thigh
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Right_Thigh/Right_Knee
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Right_Thigh/Right_Knee/Right_Ankle
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Right_Thigh/Right_Knee/Right_Ankle/Right_Toes
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead/Right_Eyebrow_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead/Right_Eyebrow_Upper/Right_Eyebrow_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead/Right_Eyebrow_Upper/Right_Eyebrow_Mid/Right_Eyebrow_Bottom
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead1
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead1/Left_Eyebrow_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead1/Left_Eyebrow_Upper/Left_Eyebrow_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead1/Left_Eyebrow_Upper/Left_Eyebrow_Mid/Left_Eyebrow_Bottom
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Index_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Index_Upper/Left_Index_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Index_Upper/Left_Index_Mid/Left_Index_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Index_Upper/Left_Index_Mid/Left_Index_Lower/Left_Index_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Middle_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Middle_Upper/Left_Middle_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Middle_Upper/Left_Middle_Mid/Left_Middle_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Middle_Upper/Left_Middle_Mid/Left_Middle_Lower/Left_Middle_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Pinky_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Pinky_Upper/Left_Pinky_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Pinky_Upper/Left_Pinky_Mid/Left_Pinky_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Pinky_Upper/Left_Pinky_Mid/Left_Pinky_Lower/Left_Pinky_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Thumb_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Thumb_Upper/Left_Thumb_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Thumb_Upper/Left_Thumb_Mid/Left_Thumb_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Index_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Index_Upper/Right_Index_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Index_Upper/Right_Index_Mid/Right_Index_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Index_Upper/Right_Index_Mid/Right_Index_Lower/Right_Index_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Middle_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Middle_Upper/Right_Middle_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Middle_Upper/Right_Middle_Mid/Right_Middle_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Middle_Upper/Right_Middle_Mid/Right_Middle_Lower/Right_Middle_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Pinky_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Pinky_Upper/Right_Pinky_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Pinky_Upper/Right_Pinky_Mid/Right_Pinky_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Pinky_Upper/Right_Pinky_Mid/Right_Pinky_Lower/Right_Pinky_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Thumb_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Thumb_Upper/Right_Thumb_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Thumb_Upper/Right_Thumb_Mid/Right_Thumb_Tip
+        weight: 1
+      - path: sm_character
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: run hold
+      takeName: Take 001
+      firstFrame: 124
+      lastFrame: 178
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: character_locator
+        weight: 1
+      - path: character_locator/Base
+        weight: 1
+      - path: character_locator/Base/Spine_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Left_Thigh
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Left_Thigh/Left_Knee
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Left_Thigh/Left_Knee/Left_Ankle
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Left_Thigh/Left_Knee/Left_Ankle/Left_Toes
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Right_Thigh
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Right_Thigh/Right_Knee
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Right_Thigh/Right_Knee/Right_Ankle
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Right_Thigh/Right_Knee/Right_Ankle/Right_Toes
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead/Right_Eyebrow_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead/Right_Eyebrow_Upper/Right_Eyebrow_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead/Right_Eyebrow_Upper/Right_Eyebrow_Mid/Right_Eyebrow_Bottom
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead1
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead1/Left_Eyebrow_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead1/Left_Eyebrow_Upper/Left_Eyebrow_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead1/Left_Eyebrow_Upper/Left_Eyebrow_Mid/Left_Eyebrow_Bottom
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Index_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Index_Upper/Left_Index_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Index_Upper/Left_Index_Mid/Left_Index_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Index_Upper/Left_Index_Mid/Left_Index_Lower/Left_Index_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Middle_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Middle_Upper/Left_Middle_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Middle_Upper/Left_Middle_Mid/Left_Middle_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Middle_Upper/Left_Middle_Mid/Left_Middle_Lower/Left_Middle_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Pinky_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Pinky_Upper/Left_Pinky_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Pinky_Upper/Left_Pinky_Mid/Left_Pinky_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Pinky_Upper/Left_Pinky_Mid/Left_Pinky_Lower/Left_Pinky_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Thumb_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Thumb_Upper/Left_Thumb_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Thumb_Upper/Left_Thumb_Mid/Left_Thumb_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Index_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Index_Upper/Right_Index_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Index_Upper/Right_Index_Mid/Right_Index_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Index_Upper/Right_Index_Mid/Right_Index_Lower/Right_Index_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Middle_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Middle_Upper/Right_Middle_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Middle_Upper/Right_Middle_Mid/Right_Middle_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Middle_Upper/Right_Middle_Mid/Right_Middle_Lower/Right_Middle_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Pinky_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Pinky_Upper/Right_Pinky_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Pinky_Upper/Right_Pinky_Mid/Right_Pinky_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Pinky_Upper/Right_Pinky_Mid/Right_Pinky_Lower/Right_Pinky_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Thumb_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Thumb_Upper/Right_Thumb_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Thumb_Upper/Right_Thumb_Mid/Right_Thumb_Tip
+        weight: 1
+      - path: sm_character
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: attack
+      takeName: Take 001
+      firstFrame: 181
+      lastFrame: 214
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: character_locator
+        weight: 1
+      - path: character_locator/Base
+        weight: 1
+      - path: character_locator/Base/Spine_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Left_Thigh
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Left_Thigh/Left_Knee
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Left_Thigh/Left_Knee/Left_Ankle
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Left_Thigh/Left_Knee/Left_Ankle/Left_Toes
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Right_Thigh
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Right_Thigh/Right_Knee
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Right_Thigh/Right_Knee/Right_Ankle
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Right_Thigh/Right_Knee/Right_Ankle/Right_Toes
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead/Right_Eyebrow_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead/Right_Eyebrow_Upper/Right_Eyebrow_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead/Right_Eyebrow_Upper/Right_Eyebrow_Mid/Right_Eyebrow_Bottom
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead1
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead1/Left_Eyebrow_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead1/Left_Eyebrow_Upper/Left_Eyebrow_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Neck/Skull_Base/Skull_Top/Chin/Forehead1/Left_Eyebrow_Upper/Left_Eyebrow_Mid/Left_Eyebrow_Bottom
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Index_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Index_Upper/Left_Index_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Index_Upper/Left_Index_Mid/Left_Index_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Index_Upper/Left_Index_Mid/Left_Index_Lower/Left_Index_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Middle_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Middle_Upper/Left_Middle_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Middle_Upper/Left_Middle_Mid/Left_Middle_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Middle_Upper/Left_Middle_Mid/Left_Middle_Lower/Left_Middle_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Pinky_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Pinky_Upper/Left_Pinky_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Pinky_Upper/Left_Pinky_Mid/Left_Pinky_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Pinky_Upper/Left_Pinky_Mid/Left_Pinky_Lower/Left_Pinky_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Thumb_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Thumb_Upper/Left_Thumb_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Left/Left_Arm_Segment_Top/Left_Arm_Segment_Mid/Left_Wrist/Left_Thumb_Upper/Left_Thumb_Mid/Left_Thumb_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Index_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Index_Upper/Right_Index_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Index_Upper/Right_Index_Mid/Right_Index_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Index_Upper/Right_Index_Mid/Right_Index_Lower/Right_Index_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Middle_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Middle_Upper/Right_Middle_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Middle_Upper/Right_Middle_Mid/Right_Middle_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Middle_Upper/Right_Middle_Mid/Right_Middle_Lower/Right_Middle_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Pinky_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Pinky_Upper/Right_Pinky_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Pinky_Upper/Right_Pinky_Mid/Right_Pinky_Lower
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Pinky_Upper/Right_Pinky_Mid/Right_Pinky_Lower/Right_Pinky_Tip
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Thumb_Upper
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Thumb_Upper/Right_Thumb_Mid
+        weight: 1
+      - path: character_locator/Base/Spine_Lower/Spine_Mid/Clavicle/Shoulder_Right/Right_Arm_Segment_Top/Right_Arm_Segment_Mid/Right_Wrist/Right_Thumb_Upper/Right_Thumb_Mid/Right_Thumb_Tip
+        weight: 1
+      - path: sm_character
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 10
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
