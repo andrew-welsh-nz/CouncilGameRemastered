@@ -24,20 +24,20 @@ public class CameraFollow : MonoBehaviour {
         basePosition = ObjectToFollow.position;
 
         //Checks if BasePosition is within the cameraFollow Bounds in the x Axis
-        if (basePosition.x <= -3.5f)
+        if (basePosition.x <= -11.0f)
         {
-            basePosition.x = -3.5f;
+            basePosition.x = -11.0f;
         }
-        else if (basePosition.x >= 3.5f) {
-            basePosition.x = 3.5f;
+        else if (basePosition.x >= 5.5f) {
+            basePosition.x = 5.5f;
         }
 
         //Checks if BasePosition is within the cameraFollow Bounds in the z Axis
-        if (basePosition.z <= -1.0f) {
-            basePosition.z = -1.0f;
+        if (basePosition.z <= -1.5f) {
+            basePosition.z = -1.5f;
         }
-        else if (basePosition.z >= 4.0f) {
-            basePosition.z = 4.0f;
+        else if (basePosition.z >= 12.0f) {
+            basePosition.z = 12.0f;
         }
 
         Vector3 TargetPosition = basePosition + CameraOffset;
