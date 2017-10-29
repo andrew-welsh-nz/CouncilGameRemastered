@@ -37,6 +37,8 @@ public class Dog : MonoBehaviour
     [SerializeField]
     ParticleSystem sofa;
 
+    public bool occupied = false;
+
     // Use this for initialization
     void Start()
     {
@@ -58,21 +60,30 @@ public class Dog : MonoBehaviour
         }
         else
         {
-            if (!agent.enabled)
+            if(!occupied)
             {
-                agent.enabled = true;
-                agent.SetDestination(target.position);
-            }
-            if (timeSinceRelease >= 2.5f && !collisionReset)
-            {
-                Debug.Log("Allowing collisions again");
-                Physics.IgnoreCollision(GetComponent<Collider>(), player.GetComponent<Collider>(), false);
-                collisionReset = true;
+                if (!agent.enabled)
+                {
+                    agent.enabled = true;
+                    agent.SetDestination(target.position);
+                }
+                if (timeSinceRelease >= 2.5f && !collisionReset)
+                {
+                    Debug.Log("Allowing collisions again");
+                    Physics.IgnoreCollision(GetComponent<Collider>(), player.GetComponent<Collider>(), false);
+                    collisionReset = true;
+                }
+                else
+                {
+                    timeSinceRelease += Time.deltaTime;
+                }
             }
             else
             {
-                timeSinceRelease += Time.deltaTime;
+                // The dog occupied by something and will not be moving towards the sofa
+                agent.enabled = false;
             }
+            
 
             //this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z - (1.0f * Time.deltaTime));
 

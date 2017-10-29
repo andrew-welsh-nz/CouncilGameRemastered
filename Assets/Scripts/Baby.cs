@@ -27,6 +27,8 @@ public class Baby : MonoBehaviour {
     float timeSinceRelease;
     bool collisionReset;
 
+    public bool occupied = false;
+
     // Use this for initialization
     void Start()
     {
@@ -47,20 +49,29 @@ public class Baby : MonoBehaviour {
         }
         else
         {
-            if(!agent.enabled)
+            if(!occupied)
             {
-                agent.enabled = true;
-                agent.SetDestination(target.position);
-            }
-            if(timeSinceRelease >= 2.5f && !collisionReset)
-            {
-                Debug.Log("Allowing collisions again");
-                Physics.IgnoreCollision(GetComponent<Collider>(), player.GetComponent<Collider>(), false);
-                collisionReset = true;
+                // The baby doesn't have what it needs, and is going to run for the door
+                if (!agent.enabled)
+                {
+                    agent.enabled = true;
+                    agent.SetDestination(target.position);
+                }
+                if (timeSinceRelease >= 2.5f && !collisionReset)
+                {
+                    Debug.Log("Allowing collisions again");
+                    Physics.IgnoreCollision(GetComponent<Collider>(), player.GetComponent<Collider>(), false);
+                    collisionReset = true;
+                }
+                else
+                {
+                    timeSinceRelease += Time.deltaTime;
+                }
             }
             else
             {
-                timeSinceRelease += Time.deltaTime;
+                // The baby has the needed object, and can stay occupied with it for a bit
+                agent.enabled = false;
             }
 
             //this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z - (1.0f * Time.deltaTime));
