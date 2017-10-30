@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class CameraFollow : MonoBehaviour {
 
     private Vector3 CameraOffset;
     private Vector3 basePosition;
     public Transform ObjectToFollow;
+
+    [SerializeField]
+    float ControllerOffsetScale = 1.0f;
 
     //Value between 0 - 1. 1 Being true following
     public float TweeningValue;
@@ -39,6 +43,9 @@ public class CameraFollow : MonoBehaviour {
         else if (basePosition.z >= 12.0f) {
             basePosition.z = 12.0f;
         }
+
+        //var JoyX = CrossPlatformInputManager.GetAxis("RightJoystickX");
+        //var JoyY = CrossPlatformInputManager.GetAxis("RightJoystickY");
 
         Vector3 TargetPosition = basePosition + CameraOffset;
 
