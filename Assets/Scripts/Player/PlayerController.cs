@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour {
 
@@ -57,10 +58,22 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 
         // Check whether the stick is outside of the deadzone. When using a keyboard it will always be over this
-        Vector3 input = new Vector3(Input.GetAxis("Horizontal" + playerNumber), 0, Input.GetAxis("Vertical" + playerNumber));
+        float h = CrossPlatformInputManager.GetAxis("Horizontal");
+        float v = CrossPlatformInputManager.GetAxis("Vertical");
+
+
+        Vector3 inputControler = new Vector3(h, 0, v);
+        Vector3 inputKeyboard = new Vector3(Input.GetAxis("Horizontal" + playerNumber), 0, Input.GetAxis("Vertical" + playerNumber));
+        Vector3 input = new Vector3(0, 0, 0);
+
+        // Uses either Keyboard input or controller input, Which ever is larger
+        if (inputControler.magnitude > inputKeyboard.magnitude)
+            input = inputControler;
+        else
+            input = inputKeyboard;
 
         // If the input is within the deadzone, ignore it. Also set the isMoving variable
-        if(input.magnitude < deadzone)
+        if (input.magnitude < deadzone)
         {
             input = Vector3.zero;
             isMoving = false;
@@ -71,6 +84,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         // Movement
+        
         // Sets the velocity of the rigidbody
         rb.velocity = (input * moveSpeed);
 
@@ -95,14 +109,16 @@ public class PlayerController : MonoBehaviour {
         }
 
         // Interaction Input
-        if(Input.GetButtonDown("Interact" + playerNumber))
+        if(CrossPlatformInputManager.GetButtonDown("Interact" + playerNumber))
         {
             //interaction.gameObject.SetActive(true);
             //anim.SetTrigger("attack");
             //for(int i = 0; i < modelAnimators.Length; i++)
             //{
-                //modelAnimators[i].SetTrigger("attack");
+            //modelAnimators[i].SetTrigger("attack");
             //}
+
+            Debug.Log("'X' Pressed");
 
             if(isHolding)
             {
