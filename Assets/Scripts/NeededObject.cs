@@ -11,6 +11,8 @@ public class NeededObject : MonoBehaviour {
 
     bool collisionReset;
 
+    float timeSinceRelease = 0.0f;
+
     // Use this for initialization
     void Start () {
 		
@@ -18,8 +20,25 @@ public class NeededObject : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (isBeingHeld)
+        {
+            this.transform.position = player.holdPosition.transform.position;
+            this.transform.rotation = player.holdPosition.transform.rotation;
+        }
+        else
+        {
+            if (timeSinceRelease >= 2.5f && !collisionReset)
+            {
+                Debug.Log("Allowing collisions again");
+                Physics.IgnoreCollision(GetComponent<Collider>(), player.GetComponent<Collider>(), false);
+                collisionReset = true;
+            }
+            else
+            {
+                timeSinceRelease += Time.deltaTime;
+            }
+        }
+    }
 
     private void OnCollisionEnter(Collision _col)
     {
@@ -32,5 +51,11 @@ public class NeededObject : MonoBehaviour {
             collisionReset = false;
             player.holdingItem = this.gameObject;
         }
+    }
+    public void Release()
+    {
+        Debug.Log("Dropping baby");
+        isBeingHeld = false;
+        timeSinceRelease = 0.0f;
     }
 }

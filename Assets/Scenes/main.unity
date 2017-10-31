@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1851841736}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -6252,8 +6252,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 727907611}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 615.5, y: 287, z: 0}
-  m_LocalScale: {x: 0.95666665, y: 0.95666665, z: 0.95666665}
+  m_LocalPosition: {x: 409, y: 230, z: 0}
+  m_LocalScale: {x: 0.76666665, y: 0.76666665, z: 0.76666665}
   m_Children:
   - {fileID: 900602703}
   - {fileID: 195431827}
@@ -8008,6 +8008,7 @@ GameObject:
   - component: {fileID: 1260952575}
   - component: {fileID: 1260952574}
   - component: {fileID: 1260952578}
+  - component: {fileID: 1260952573}
   m_Layer: 0
   m_Name: Cube
   m_TagString: NeededObject
@@ -8015,6 +8016,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1260952573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1260952572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4923bff3168c5a246b6b45eb7d92768f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2064917743}
 --- !u!23 &1260952574
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11113,7 +11126,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2073588324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -639.3798, y: 300, z: 0}
+  m_LocalPosition: {x: -529.4783, y: 300, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 695822441}

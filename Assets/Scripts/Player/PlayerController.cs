@@ -134,6 +134,12 @@ public class PlayerController : MonoBehaviour {
                     holdingItem.GetComponent<Dog>().Release();
                     holdingItem = null;
                 }
+                else if(holdingItem.tag == "NeededObject")
+                {
+                    isHolding = false;
+                    holdingItem.GetComponent<NeededObject>().Release();
+                    holdingItem = null;
+                }
             }
             else
             {
