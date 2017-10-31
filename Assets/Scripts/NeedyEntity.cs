@@ -31,16 +31,23 @@ public class NeedyEntity : MonoBehaviour {
 
     private void OnCollisionEnter(Collision _col)
     {
+        Debug.Log("COLLISION");
+
         // If the item collides with the owner of the store, set it to be held and ignore any further collisions with the player
-        if (_col.gameObject.tag == "NeededObject" && needing == true)
+        if (_col.gameObject.tag == "NeededObject") //&& needing == true)
         {
-            if(babyEntity != false)
+            Debug.Log("Pausing");
+
+            if (babyEntity != false)
             {
                 babyEntity.occupied = true;
+                Debug.Log("Pausing");
+                needing = false;
             }
             else if (dogEntity != false)
             {
                 dogEntity.occupied = true;
+                needing = false;
             }
         }
     }
@@ -52,10 +59,12 @@ public class NeedyEntity : MonoBehaviour {
         if (babyEntity != false)
         {
             babyEntity.occupied = false;
+            needing = true;
         }
         else if (dogEntity != false)
         {
             dogEntity.occupied = false;
+            needing = true;
         }
     }
 }
