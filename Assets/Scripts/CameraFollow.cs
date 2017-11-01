@@ -12,8 +12,7 @@ public class CameraFollow : MonoBehaviour {
     [SerializeField]
     float ControllerOffsetScale = 1.0f;
 
-    //Value between 0 - 1. 1 Being true following
-    public float TweeningValue;
+    [SerializeField]
 
     //Used for Debugging
     public bool IsTweeningOn;
@@ -53,15 +52,14 @@ public class CameraFollow : MonoBehaviour {
         ControllerOffest = ControllerOffest.normalized;
         ControllerOffest *= ControllerOffsetScale;
 
+        Vector3 NewTargetPos = (TargetPosition + ControllerOffest);
+        
 
         if (IsTweeningOn)
         {
-            this.transform.position += (TargetPosition - this.transform.position) * TweeningValue;
-
-            Vector3 NewTargetPos = (this.transform.position + ControllerOffest);
-            Vector3 Velocity = (NewTargetPos - this.transform.position) / 2.0f;
-            this.transform.position += Velocity * Time.deltaTime;
-            //this.transform.position = Vector3.Lerp(this.transform.position, NewTargetPos, 0.1f);
+            //this.transform.position += (TargetPosition - this.transform.position) * TweeningValue * Time.deltaTime * Speed;
+            this.transform.position = TargetPosition;
+            this.transform.position += (NewTargetPos - this.transform.position) * Time.deltaTime / 2.0f;
 
         }
         else {
