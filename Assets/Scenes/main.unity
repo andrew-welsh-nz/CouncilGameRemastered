@@ -569,7 +569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectToFollow: {fileID: 2064917742}
-  ControllerOffsetScale: 1
+  ControllerOffsetScale: 50
   TweeningValue: 0.8
   IsTweeningOn: 1
 --- !u!4 &174379970 stripped
@@ -6252,8 +6252,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 727907611}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 409, y: 230, z: 0}
-  m_LocalScale: {x: 0.76666665, y: 0.76666665, z: 0.76666665}
+  m_LocalPosition: {x: 550.5, y: 229, z: 0}
+  m_LocalScale: {x: 0.7633333, y: 0.7633333, z: 0.7633333}
   m_Children:
   - {fileID: 900602703}
   - {fileID: 195431827}
@@ -11126,7 +11126,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2073588324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -529.4783, y: 300, z: 0}
+  m_LocalPosition: {x: -717.1791, y: 300, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 695822441}

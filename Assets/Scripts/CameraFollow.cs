@@ -44,14 +44,25 @@ public class CameraFollow : MonoBehaviour {
             basePosition.z = 12.0f;
         }
 
-        //var JoyX = CrossPlatformInputManager.GetAxis("RightJoystickX");
-        //var JoyY = CrossPlatformInputManager.GetAxis("RightJoystickY");
+        var JoyX = CrossPlatformInputManager.GetAxis("RightJoystickX");
+        var JoyY = CrossPlatformInputManager.GetAxis("RightJoystickY");
 
         Vector3 TargetPosition = basePosition + CameraOffset;
+
+        Vector3 ControllerOffest = new Vector3(JoyX, 0, -JoyY);
+        ControllerOffest = ControllerOffest.normalized;
+        ControllerOffest *= ControllerOffsetScale;
+
 
         if (IsTweeningOn)
         {
             this.transform.position += (TargetPosition - this.transform.position) * TweeningValue;
+
+            Vector3 NewTargetPos = (this.transform.position + ControllerOffest);
+            Vector3 Velocity = (NewTargetPos - this.transform.position) / 2.0f;
+            this.transform.position += Velocity * Time.deltaTime;
+            //this.transform.position = Vector3.Lerp(this.transform.position, NewTargetPos, 0.1f);
+
         }
         else {
             this.transform.position = TargetPosition;
