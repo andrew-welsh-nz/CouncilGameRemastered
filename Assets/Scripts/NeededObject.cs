@@ -10,6 +10,8 @@ public class NeededObject : MonoBehaviour {
     public bool CanOccupyBaby = false;
     public bool CanOccupyDog = false;
 
+    bool CanBeUsed = true;
+
     bool isBeingHeld = false;
 
     bool collisionReset;
@@ -53,6 +55,7 @@ public class NeededObject : MonoBehaviour {
             Physics.IgnoreCollision(GetComponent<Collider>(), player.GetComponent<Collider>(), true);
             collisionReset = false;
             player.holdingItem = this.gameObject;
+            CanBeUsed = true;
         }
     }
     public void Release()
@@ -60,5 +63,13 @@ public class NeededObject : MonoBehaviour {
         Debug.Log("Dropping baby");
         isBeingHeld = false;
         timeSinceRelease = 0.0f;
+    }
+
+    public bool GetCanBeUsed() {
+        return CanBeUsed;
+    }
+
+    public void SetCanBeUsed(bool _b) {
+        CanBeUsed = _b;    
     }
 }

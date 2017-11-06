@@ -39,7 +39,7 @@ public class NeedyEntity : MonoBehaviour {
         Debug.Log("COLLISION");
 
         // If the item collides with the owner of the store, set it to be held and ignore any further collisions with the player
-        if (_col.gameObject.tag == "NeededObject") //&& needing == true)
+        if (_col.gameObject.tag == "NeededObject" && _col.gameObject.GetComponent<NeededObject>().GetCanBeUsed()) //&& needing == true)
         {
             Debug.Log("Pausing");
 
@@ -82,7 +82,7 @@ public class NeedyEntity : MonoBehaviour {
 
         CurrentNeededObject.GetComponent<Rigidbody>().AddForce(new Vector3(ThrowXVelocity, 1.5f, ThrowZVelocity) * ThrownStrength);
 
-        yield return new WaitForSeconds(0.2f);
+        CurrentNeededObject.GetComponent<NeededObject>().SetCanBeUsed(false);
 
         if (babyEntity != false)
         {
