@@ -43,14 +43,16 @@ public class NeedyEntity : MonoBehaviour {
         {
             Debug.Log("Pausing");
 
-            if (babyEntity != false)
+            //Checks if the script is on a baby and then if the needy object is for the baby
+            if (babyEntity != false && _col.gameObject.GetComponent<NeededObject>().CanOccupyBaby == true)
             {
                 CurrentNeededObject = _col.gameObject;
                 babyEntity.occupied = true;
                 needing = false;
                 StartCoroutine("WaitAndSet");
             }
-            else if (dogEntity != false)
+            //Checks if the script is on a Dog and then if the needy object is for the Dog
+            else if (dogEntity != false && _col.gameObject.GetComponent<NeededObject>().CanOccupyDog == true)
             {
                 CurrentNeededObject = _col.gameObject;
                 dogEntity.occupied = true;
@@ -68,7 +70,17 @@ public class NeedyEntity : MonoBehaviour {
 
         //Throw Object
         Debug.Log("Needy Object Thrown");
-        CurrentNeededObject.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-5.0f, 5.0f), 1.0f, Random.Range(-5.0f, 5.0f)) * ThrownStrength);
+
+        //50% change the number is negative (this way we can exclude numbers -2.9f to 2.9f as they are too small)
+        float ThrowXVelocity = Random.Range(3.0f, 5.0f);
+        if (Random.Range(0.0f, 1.0f) < 0.5f)
+            ThrowXVelocity *= -1.0f;
+
+        float ThrowZVelocity = Random.Range(3.0f, 5.0f);
+        if (Random.Range(0.0f, 1.0f) < 0.5f)
+            ThrowZVelocity *= -1.0f;
+
+        CurrentNeededObject.GetComponent<Rigidbody>().AddForce(new Vector3(ThrowXVelocity, 1.5f, ThrowZVelocity) * ThrownStrength);
 
         yield return new WaitForSeconds(0.2f);
 

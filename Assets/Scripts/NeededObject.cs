@@ -7,6 +7,9 @@ public class NeededObject : MonoBehaviour {
     [SerializeField]
     PlayerController player;
 
+    public bool CanOccupyBaby = false;
+    public bool CanOccupyDog = false;
+
     bool isBeingHeld = false;
 
     bool collisionReset;
