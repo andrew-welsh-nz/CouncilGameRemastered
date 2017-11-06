@@ -249,7 +249,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 721e2ea053369b3489462f1675043125, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: 721e2ea053369b3489462f1675043125, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -727,6 +727,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 35b6c1d9c68f22f4da7591bc06f026c8, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 35b6c1d9c68f22f4da7591bc06f026c8, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -10130,7 +10134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f4b6355bd0a7a4d923989724f5c818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 10
+  waitTime: 2
+  ThrownStrength: 50
 --- !u!1 &1851841735
 GameObject:
   m_ObjectHideFlags: 0
@@ -10613,7 +10618,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100038, guid: bf7ebc3affe827446bb72ab2a5aa5eb8, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: bf7ebc3affe827446bb72ab2a5aa5eb8, type: 3}
       propertyPath: m_LocalPosition.y
