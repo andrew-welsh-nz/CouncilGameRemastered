@@ -10,6 +10,7 @@ public class TypeWritter : MonoBehaviour {
     private string currentText = "";
     public bool IsTextGood;
     public GameObject Phone;
+    public GameObject SinkPhone;
 
 	// Use this for initialization
 	void Start () {
@@ -40,6 +41,7 @@ public class TypeWritter : MonoBehaviour {
 
         //After Text Finished Tpying, allow the Player to continue
         Phone.GetComponent<Phone>().IsTextFinished = true;
+        SinkPhone.GetComponent<SinkPhone>().IsTextFinished = true;
     }	
 
 

@@ -8,7 +8,7 @@ public class sink : MonoBehaviour
     private bool StartFalling = false;
     private bool ResetTree = false;
     public float TimeToFall;
-    float TimeRemaining;
+    public float TimeRemaining;
     private float ResetRotationAmount;
     private float ZPositionWhenCalled;
     private Color DefaultColor;
@@ -34,26 +34,15 @@ public class sink : MonoBehaviour
 
         FlashCooldown += Time.deltaTime;
 
-        if (TimeToFall > 18)
-        {
-            TimeToFall -= Time.deltaTime * 0.25f;
-        }
-        else
-        {
-            TimeToFall = 18;
-        }
-
         if (TimeRemaining / TimeToFall <= 0.5f && FlashCooldown >= 0.25f && TimeRemaining > 1.0f)
         {
             if (this.GetComponentInChildren<MeshRenderer>().material.color != RedColor)
             {
                 this.GetComponentInChildren<MeshRenderer>().material.color = RedColor;
-                Debug.Log("Changed to Red");
             }
             else
             {
                 this.GetComponentInChildren<MeshRenderer>().material.color = DefaultColor;
-                Debug.Log("Changed to Green");
             }
             FlashCooldown = 0.0f;
         }
@@ -61,17 +50,14 @@ public class sink : MonoBehaviour
         //3 Seconds left, start falling
         if (TimeRemaining <= 1.0f)
         {
-            Debug.Log("Tree Falling");
             this.GetComponentInChildren<MeshRenderer>().material.color = RedColor;
-            transform.Rotate(-75.0f / 1.0f * Time.deltaTime, 0.0f, 0.0f);
         }
 
         if (TimeRemaining <= 0.0f)
         {
-            //game.GameOver(2);
-            TimeRemaining = TimeToFall;
+            //Sink Flooded, add flooding code here
             ResetTree = false;
-            StartFalling = true;
+            StartFalling = false;
         }
 
         if (ResetTree == true)

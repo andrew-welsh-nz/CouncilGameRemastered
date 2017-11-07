@@ -72,26 +72,48 @@ public class NeedyEntity : MonoBehaviour {
         Debug.Log("Needy Object Thrown");
 
         //50% change the number is negative (this way we can exclude numbers -2.9f to 2.9f as they are too small)
-        float ThrowXVelocity = Random.Range(3.0f, 5.0f);
-        if (Random.Range(0.0f, 1.0f) < 0.5f)
-            ThrowXVelocity *= -1.0f;
+        //float ThrowXVelocity = Random.Range(3.0f, 5.0f);
+        //if (Random.Range(0.0f, 1.0f) < 0.5f)
+        //    ThrowXVelocity *= -1.0f;
 
-        float ThrowZVelocity = Random.Range(3.0f, 5.0f);
-        if (Random.Range(0.0f, 1.0f) < 0.5f)
-            ThrowZVelocity *= -1.0f;
+        //float ThrowZVelocity = Random.Range(3.0f, 5.0f);
+        //if (Random.Range(0.0f, 1.0f) < 0.5f)
+        //    ThrowZVelocity *= -1.0f;
 
-        CurrentNeededObject.GetComponent<Rigidbody>().AddForce(new Vector3(ThrowXVelocity, 1.5f, ThrowZVelocity) * ThrownStrength);
+        //CurrentNeededObject.GetComponent<Rigidbody>().AddForce(new Vector3(ThrowXVelocity, 2.5f, ThrowZVelocity) * ThrownStrength);
 
         CurrentNeededObject.GetComponent<NeededObject>().SetCanBeUsed(false);
 
         if (babyEntity != false)
         {
+            Vector3 ThrowVelocity = babyEntity.transform.forward.normalized;
+            if (Random.Range(0.0f, 1.0f) < 0.5f)
+                ThrowVelocity += babyEntity.transform.right.normalized * 0.5f;
+            else
+                ThrowVelocity -= babyEntity.transform.right.normalized * 0.5f;
+
+            ThrowVelocity.y += 0.75f;
+
+            ThrowVelocity = ThrowVelocity.normalized * ThrownStrength;
+            CurrentNeededObject.GetComponent<Rigidbody>().AddForce(ThrowVelocity);
+
             CurrentNeededObject = null;
             babyEntity.occupied = false;
             needing = true;
         }
         else if (dogEntity != false)
         {
+            Vector3 ThrowVelocity = dogEntity.transform.forward.normalized;
+            if (Random.Range(0.0f, 1.0f) < 0.5f)
+                ThrowVelocity += dogEntity.transform.right.normalized * 0.5f;
+            else
+                ThrowVelocity -= dogEntity.transform.right.normalized * 0.5f;
+
+            ThrowVelocity.y += 0.75f;
+
+            ThrowVelocity = ThrowVelocity.normalized * ThrownStrength;
+            CurrentNeededObject.GetComponent<Rigidbody>().AddForce(ThrowVelocity);
+
             CurrentNeededObject = null;
             dogEntity.occupied = false;
             needing = true;

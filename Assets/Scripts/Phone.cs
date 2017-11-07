@@ -92,6 +92,7 @@ public class Phone : MonoBehaviour {
         //      -Free PhoneIsInUse Bool after this action is complete.
 
         IsTextFinished = false;
+        Continue = false;   
         GameObject ImmediateHazard;
 
         if (TreeHazard.GetComponent<Tree>().GetTimeRemaining() <= WaterPipeHazard.GetComponent<Well>().GetTimeRemaining())
