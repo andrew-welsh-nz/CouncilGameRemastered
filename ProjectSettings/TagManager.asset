@@ -11,6 +11,7 @@ TagManager:
   - Dog
   - Phone
   - NeededObject
+  - Water
   layers:
   - Default
   - TransparentFX

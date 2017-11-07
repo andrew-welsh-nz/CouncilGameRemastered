@@ -155,4 +155,20 @@ public class PlayerController : MonoBehaviour {
             //rb.AddForce(input * dashScale * moveSpeed, ForceMode.Impulse);
         //}
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Water")
+        {
+            moveSpeed *= 0.5f;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Water")
+        {
+            moveSpeed *= 2;
+        }
+    }
 }
