@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class sink : MonoBehaviour
 {
+    [SerializeField] GameObject
+    WaterObject;
 
     private bool StartFalling = false;
     private bool ResetTree = false;
@@ -58,6 +60,7 @@ public class sink : MonoBehaviour
             //Sink Flooded, add flooding code here
             ResetTree = false;
             StartFalling = false;
+            WaterObject.SetActive(true);
         }
 
         if (ResetTree == true)

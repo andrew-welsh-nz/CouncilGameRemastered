@@ -53,15 +53,13 @@ public class Tree : MonoBehaviour {
         }
 
         //3 Seconds left, start falling
-        if (TimeRemaining <= 1.0f) {
+        if (TimeRemaining <= 1.0f && TimeRemaining > 0.0f) {
             Debug.Log("Tree Falling");
             this.GetComponentInChildren<MeshRenderer>().material.color = RedColor;
             transform.Rotate(-75.0f / 1.0f * Time.deltaTime, 0.0f, 0.0f);
         }
 
         if (TimeRemaining <= 0.0f) {
-            //game.GameOver(2);
-            TimeRemaining = TimeToFall;
             ResetTree = false;
             StartFalling = true;
         }

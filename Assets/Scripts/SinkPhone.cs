@@ -41,7 +41,7 @@ public class SinkPhone : MonoBehaviour {
                 Continue = true;
          }
 
-        if (SinkHazard.GetComponent<sink>().GetTimeRemaining() / SinkHazard.GetComponent<sink>().TimeToFall <= 0.5f && FlashCooldown >= 0.25f) {
+        if (SinkHazard.GetComponent<sink>().GetTimeRemaining() / SinkHazard.GetComponent<sink>().TimeToFall <= 0.5f && FlashCooldown >= 0.25f && SinkHazard.GetComponent<sink>().TimeRemaining > 0.0f) {
             FlashCooldown = 0.0f;
             if (this.GetComponentInChildren<MeshRenderer>().material.color != WhiteColor)
             {

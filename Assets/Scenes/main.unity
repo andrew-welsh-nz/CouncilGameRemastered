@@ -1513,7 +1513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   game: {fileID: 1591387604}
-  TimeToFall: 5
+  TimeToFall: 20
 --- !u!1 &309194466
 GameObject:
   m_ObjectHideFlags: 0
@@ -6760,8 +6760,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 727907611}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 886, y: 498.5, z: 0}
-  m_LocalScale: {x: 1.6616666, y: 1.6616666, z: 1.6616666}
+  m_LocalPosition: {x: 550.5, y: 229, z: 0}
+  m_LocalScale: {x: 0.7633333, y: 0.7633333, z: 0.7633333}
   m_Children:
   - {fileID: 900602703}
   - {fileID: 195431827}
@@ -8000,12 +8000,12 @@ GameObject:
   - component: {fileID: 1037747585}
   - component: {fileID: 1037747584}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Water
   m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1037747584
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8020,7 +8020,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5fb83ae58e206a84ea21e26ae5a0cd99, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8065,12 +8065,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1037747583}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2.35}
-  m_LocalScale: {x: 2, y: 1, z: 2}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.88, y: -1.01, z: -1.92}
+  m_LocalScale: {x: 6, y: 1, z: 4}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 1693930272}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1045122807
 GameObject:
@@ -8336,7 +8336,7 @@ MonoBehaviour:
   fullText: 
   IsTextGood: 0
   Phone: {fileID: 208012697}
-  SinkPhone: {fileID: 0}
+  SinkPhone: {fileID: 1864357780}
 --- !u!1 &1104432998 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 44c0db81623c47f40bfd74e98d9b7a53, type: 3}
@@ -9030,7 +9030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2064917743}
-  CanOccupyBaby: 0
+  CanOccupyBaby: 1
   CanOccupyDog: 0
 --- !u!23 &1260952574
 MeshRenderer:
@@ -9046,7 +9046,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 722937204d44c314582b43a418ead132, type: 2}
+  - {fileID: 2100000, guid: 8da48d8a6c820ee49aee190cb9c0738f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9906,7 +9906,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2064917743}
   CanOccupyBaby: 0
-  CanOccupyDog: 0
+  CanOccupyDog: 1
 --- !u!54 &1425178785
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11210,7 +11210,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -13.31, y: 8.39, z: -0.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1037747587}
   m_Father: {fileID: 2103038460}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11278,6 +11279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15356a1d32cf4004f8969b8606291672, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WaterObject: {fileID: 1037747583}
   TimeToFall: 30
   TimeRemaining: 0
 --- !u!1 &1719628197
@@ -11753,8 +11755,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f4b6355bd0a7a4d923989724f5c818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 2
-  ThrownStrength: 0
+  waitTime: 6
+  ThrownStrength: 250
 --- !u!1 &1851841735
 GameObject:
   m_ObjectHideFlags: 0
@@ -11870,8 +11872,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f4b6355bd0a7a4d923989724f5c818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 2
-  ThrownStrength: 0
+  waitTime: 6
+  ThrownStrength: 250
 --- !u!114 &1858584176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11911,7 +11913,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.35
-  m_Speed: 2.5
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -12739,7 +12741,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7ae776a1284e8754ab72c2b530267f88, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.623
+  m_Volume: 0.197
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -13141,7 +13143,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2073588324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -529.1996, y: 300, z: 0}
+  m_LocalPosition: {x: -717.1791, y: 300, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 695822441}

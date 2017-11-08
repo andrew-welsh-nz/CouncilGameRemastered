@@ -54,7 +54,7 @@ public class Phone : MonoBehaviour {
                 Continue = true;
          }
 
-        if (TreeHazard.GetComponent<Tree>().GetTimeRemaining() / TreeHazard.GetComponent<Tree>().TimeToFall <= 0.5f && FlashCooldown >= 0.25f) {
+        if (TreeHazard.GetComponent<Tree>().GetTimeRemaining() / TreeHazard.GetComponent<Tree>().TimeToFall <= 0.5f && FlashCooldown >= 0.25f && TreeHazard.GetComponent<Tree>().GetTimeRemaining() > 0.0f) {
             FlashCooldown = 0.0f;
             if (this.GetComponentInChildren<MeshRenderer>().material.color != WhiteColor)
             {
