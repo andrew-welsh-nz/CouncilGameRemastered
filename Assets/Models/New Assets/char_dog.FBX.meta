@@ -1,0 +1,334 @@
+fileFormatVersion: 2
+guid: 3ad92d16cab0bcc4690d6344c0584f40
+timeCreated: 1510093624
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: CATRigLLegDigit11
+    100002: CATRigLLegDigit11 1
+    100004: CATRigLLegPlatform
+    100006: CATRigLLegPlatform 1
+    100008: CATRigRLegDigit11
+    100010: CATRigRLegDigit11 1
+    100012: CATRigRLegPlatform
+    100014: CATRigRLegPlatform 1
+    100016: CATRigTail1
+    100018: CATRigTail2
+    100020: CATRigTail3
+    100022: CATRigTail4
+    100024: CATRigTail5
+    100026: //RootNode
+    100028: Dog_Rig
+    100030: dog_sm
+    100032: Head
+    100034: L_Ankle
+    100036: L_Ear
+    100038: L_Elbow
+    100040: L_Eyebrow
+    100042: L_Foot
+    100044: L_Hand
+    100046: L_Knee
+    100048: L_Shoulder
+    100050: L_Thigh
+    100052: L_Wrist
+    100054: Neck_0
+    100056: Neck_1
+    100058: Pelvis
+    100060: R_Ankle
+    100062: R_Ear
+    100064: R_Ear_Tip
+    100066: R_Ear_tip
+    100068: R_Elbow
+    100070: R_Eyebrow
+    100072: R_Foot
+    100074: R_Hand
+    100076: R_Knee
+    100078: R_Shoulder
+    100080: R_Thigh
+    100082: R_Wrist
+    100084: Spine_0
+    100086: Spine_1
+    100088: Spine_2
+    100090: Spine_3
+    100092: Spine_4
+    100094: Torso
+    400000: CATRigLLegDigit11
+    400002: CATRigLLegDigit11 1
+    400004: CATRigLLegPlatform
+    400006: CATRigLLegPlatform 1
+    400008: CATRigRLegDigit11
+    400010: CATRigRLegDigit11 1
+    400012: CATRigRLegPlatform
+    400014: CATRigRLegPlatform 1
+    400016: CATRigTail1
+    400018: CATRigTail2
+    400020: CATRigTail3
+    400022: CATRigTail4
+    400024: CATRigTail5
+    400026: //RootNode
+    400028: Dog_Rig
+    400030: dog_sm
+    400032: Head
+    400034: L_Ankle
+    400036: L_Ear
+    400038: L_Elbow
+    400040: L_Eyebrow
+    400042: L_Foot
+    400044: L_Hand
+    400046: L_Knee
+    400048: L_Shoulder
+    400050: L_Thigh
+    400052: L_Wrist
+    400054: Neck_0
+    400056: Neck_1
+    400058: Pelvis
+    400060: R_Ankle
+    400062: R_Ear
+    400064: R_Ear_Tip
+    400066: R_Ear_tip
+    400068: R_Elbow
+    400070: R_Eyebrow
+    400072: R_Foot
+    400074: R_Hand
+    400076: R_Knee
+    400078: R_Shoulder
+    400080: R_Thigh
+    400082: R_Wrist
+    400084: Spine_0
+    400086: Spine_1
+    400088: Spine_2
+    400090: Spine_3
+    400092: Spine_4
+    400094: Torso
+    4300000: dog_sm
+    7400000: Idle
+    7400002: Fidget
+    7400004: Run
+    7400006: Held
+    7400008: Interact
+    9500000: //RootNode
+    13700000: dog_sm
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: bd02ab879a0054b40a837451623c0d10, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Fidget
+      takeName: Take 001
+      firstFrame: 40
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Run
+      takeName: Take 001
+      firstFrame: 80
+      lastFrame: 110
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Held
+      takeName: Take 001
+      firstFrame: 120
+      lastFrame: 160
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Interact
+      takeName: Take 001
+      firstFrame: 170
+      lastFrame: 240
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 5
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

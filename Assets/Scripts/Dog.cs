@@ -39,6 +39,8 @@ public class Dog : MonoBehaviour
 
     public bool occupied = false;
 
+    Animator anim;
+
     // Use this for initialization
     void Start()
     {
@@ -47,11 +49,19 @@ public class Dog : MonoBehaviour
 
         agent.destination = target.position;
         sofa.Stop();
+
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        anim.SetFloat("speed", agent.velocity.magnitude);
+        anim.SetBool("held", isBeingHeld);
+
+        Debug.Log("Speed:  " + agent.velocity.magnitude);
+
         // Move the item to the correct position if it is being held
         if (isBeingHeld)
         {
@@ -108,6 +118,7 @@ public class Dog : MonoBehaviour
 
             isAtSofa = true;
             sofa.Play();
+            anim.SetTrigger("interact");
         }
     }
 
