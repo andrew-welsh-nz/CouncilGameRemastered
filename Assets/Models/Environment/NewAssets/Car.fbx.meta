@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: efe20d23c3b403449bd335db42a75581
-timeCreated: 1510321717
+timeCreated: 1510410180
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -12,6 +12,11 @@ ModelImporter:
     4300000: pCube6
     9500000: //RootNode
   externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CarColour3
+    second: {fileID: 2100000, guid: 1e3fbb13727a52946aff7a390e2b5fd9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

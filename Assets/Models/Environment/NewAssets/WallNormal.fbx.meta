@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 19d35cebdfcc9174b80369c3012bc068
-timeCreated: 1510321714
+timeCreated: 1510410022
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -24,11 +24,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: M_WallSkirtingColour
     second: {fileID: 2100000, guid: d43aa9ff61c91e6458dd93afa16a059f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert1
-    second: {fileID: 2100000, guid: 18b365b460c27a84fb37683a5280029d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
