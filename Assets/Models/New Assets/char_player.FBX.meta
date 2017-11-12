@@ -1,98 +1,108 @@
 fileFormatVersion: 2
-guid: b7b808d45841f9c4282215ce39e3880d
-timeCreated: 1510484851
+guid: c8ee5426d06d7be4e90147bc350ed780
+timeCreated: 1510526147
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Baby_
-    100002: Baby_Eyebrow
-    100004: Baby_Eyebrow 1
-    100006: Baby_Eyebrow 2
-    100008: Baby_Hips
-    100010: Baby_Hips001
-    100012: Baby_L_1
-    100014: Baby_L_2
-    100016: Baby_L_Ankle
-    100018: Baby_L_Ankle 1
-    100020: Baby_L_Digit11
-    100022: Baby_L_Digit12
-    100024: Baby_L_Digit21
-    100026: Baby_L_Digit22
-    100028: Baby_L_Platform
-    100030: Baby_L_Platform 1
-    100032: Baby_L_Shin
-    100034: Baby_L_Thigh
-    100036: Baby_L_Toes
-    100038: Baby_R_1
-    100040: Baby_R_2
-    100042: Baby_R_Ankle
-    100044: Baby_R_Ankle 1
-    100046: Baby_R_Digit11
-    100048: Baby_R_Digit12
-    100050: Baby_R_Digit21
-    100052: Baby_R_Digit22
-    100054: Baby_R_Platform
-    100056: Baby_R_Platform 1
-    100058: Baby_R_Shin
-    100060: Baby_R_Thigh
-    100062: Baby_R_Toes
-    100064: baby_sm
-    100066: Baby_Spine1
-    100068: Baby_Spine2
-    100070: Baby_Spine3
-    100072: //RootNode
-    400000: Baby_
-    400002: Baby_Eyebrow
-    400004: Baby_Eyebrow 1
-    400006: Baby_Eyebrow 2
-    400008: Baby_Hips
-    400010: Baby_Hips001
-    400012: Baby_L_1
-    400014: Baby_L_2
-    400016: Baby_L_Ankle
-    400018: Baby_L_Ankle 1
-    400020: Baby_L_Digit11
-    400022: Baby_L_Digit12
-    400024: Baby_L_Digit21
-    400026: Baby_L_Digit22
-    400028: Baby_L_Platform
-    400030: Baby_L_Platform 1
-    400032: Baby_L_Shin
-    400034: Baby_L_Thigh
-    400036: Baby_L_Toes
-    400038: Baby_R_1
-    400040: Baby_R_2
-    400042: Baby_R_Ankle
-    400044: Baby_R_Ankle 1
-    400046: Baby_R_Digit11
-    400048: Baby_R_Digit12
-    400050: Baby_R_Digit21
-    400052: Baby_R_Digit22
-    400054: Baby_R_Platform
-    400056: Baby_R_Platform 1
-    400058: Baby_R_Shin
-    400060: Baby_R_Thigh
-    400062: Baby_R_Toes
-    400064: baby_sm
-    400066: Baby_Spine1
-    400068: Baby_Spine2
-    400070: Baby_Spine3
-    400072: //RootNode
-    4300000: baby_sm
+    100000: Char_B_Hair
+    100002: Char_B_Skirt
+    100004: Char_F_Skirt
+    100006: Char_Head
+    100008: Char_L_Arm_1
+    100010: Char_L_Arm_2
+    100012: Char_L_Arm_Collarbone
+    100014: Char_L_Arm_Finger_1
+    100016: Char_L_Arm_Finger_2
+    100018: Char_L_Arm_Palm
+    100020: Char_L_Arm_Thumb_1
+    100022: Char_L_Arm_Thumb_2
+    100024: Char_L_Eyebrow
+    100026: Char_L_Hair
+    100028: Char_L_Leg_1
+    100030: Char_L_Leg_2
+    100032: Char_L_Leg_Ankle
+    100034: Char_L_Leg_Platform
+    100036: char_mesh
+    100038: Char_Pelvis
+    100040: Char_Pelvis001
+    100042: Char_PelvisBone002
+    100044: Char_Platform
+    100046: //RootNode
+    100048: Char_R_Arm_1
+    100050: Char_R_Arm_2
+    100052: Char_R_Arm_Collarbone
+    100054: Char_R_Arm_Finger_1
+    100056: Char_R_Arm_Finger_2
+    100058: Char_R_Arm_Palm
+    100060: Char_R_Arm_Thumb_1
+    100062: Char_R_Arm_Thumb_2
+    100064: Char_R_Eyebrow
+    100066: Char_R_Hair
+    100068: Char_R_Leg_1
+    100070: Char_R_Leg_2
+    100072: Char_R_Leg_Ankle
+    100074: Char_R_Leg_Platform
+    100076: Char_Spine_1
+    100078: Char_Spine_2
+    100080: Char_Spine_3
+    400000: Char_B_Hair
+    400002: Char_B_Skirt
+    400004: Char_F_Skirt
+    400006: Char_Head
+    400008: Char_L_Arm_1
+    400010: Char_L_Arm_2
+    400012: Char_L_Arm_Collarbone
+    400014: Char_L_Arm_Finger_1
+    400016: Char_L_Arm_Finger_2
+    400018: Char_L_Arm_Palm
+    400020: Char_L_Arm_Thumb_1
+    400022: Char_L_Arm_Thumb_2
+    400024: Char_L_Eyebrow
+    400026: Char_L_Hair
+    400028: Char_L_Leg_1
+    400030: Char_L_Leg_2
+    400032: Char_L_Leg_Ankle
+    400034: Char_L_Leg_Platform
+    400036: char_mesh
+    400038: Char_Pelvis
+    400040: Char_Pelvis001
+    400042: Char_PelvisBone002
+    400044: Char_Platform
+    400046: //RootNode
+    400048: Char_R_Arm_1
+    400050: Char_R_Arm_2
+    400052: Char_R_Arm_Collarbone
+    400054: Char_R_Arm_Finger_1
+    400056: Char_R_Arm_Finger_2
+    400058: Char_R_Arm_Palm
+    400060: Char_R_Arm_Thumb_1
+    400062: Char_R_Arm_Thumb_2
+    400064: Char_R_Eyebrow
+    400066: Char_R_Hair
+    400068: Char_R_Leg_1
+    400070: Char_R_Leg_2
+    400072: Char_R_Leg_Ankle
+    400074: Char_R_Leg_Platform
+    400076: Char_Spine_1
+    400078: Char_Spine_2
+    400080: Char_Spine_3
+    4300000: char_mesh
     7400000: Idle
-    7400002: Walk
+    7400002: Run
     7400004: Held
-    7400006: Sleep
-    7400008: Interact
+    7400006: Held Run
+    7400008: Throw
+    7400010: Interact
+    7400012: Attack
     9500000: //RootNode
-    13700000: baby_sm
+    13700000: char_mesh
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: bd02ab879a0054b40a837451623c0d10, type: 2}
+      name: default
+    second: {fileID: 2100000, guid: 81118f590d8782540a5a346bba9d882f, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -148,7 +158,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Walk
+      name: Run
       takeName: Take 001
       firstFrame: 40
       lastFrame: 70
@@ -204,7 +214,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Sleep
+      name: Held Run
       takeName: Take 001
       firstFrame: 120
       lastFrame: 150
@@ -232,10 +242,66 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Interact
+      name: Throw
       takeName: Take 001
       firstFrame: 160
-      lastFrame: 220
+      lastFrame: 200
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Interact
+      takeName: Take 001
+      firstFrame: 210
+      lastFrame: 240
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Attack
+      takeName: Take 001
+      firstFrame: -66
+      lastFrame: 0
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -262,7 +328,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 4
+    globalScale: 4.4
     meshCompression: 0
     addColliders: 0
     importVisibility: 1

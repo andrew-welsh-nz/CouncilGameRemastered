@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
-        anim = GetComponent<Animator>();
+        anim = transform.Find("char_player").GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -146,6 +146,9 @@ public class PlayerController : MonoBehaviour {
                 // Activate the interact item
                 interaction.gameObject.SetActive(true);
                 //interaction.timeSinceActive = 0.0f;
+
+
+                anim_interact();
             }
         }
 
@@ -170,5 +173,10 @@ public class PlayerController : MonoBehaviour {
         {
             moveSpeed *= 2;
         }
+    }
+
+    public void anim_interact()
+    {
+        anim.SetTrigger("interact");
     }
 }
