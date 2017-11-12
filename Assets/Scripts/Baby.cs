@@ -29,6 +29,9 @@ public class Baby : MonoBehaviour {
 
     public bool occupied = false;
 
+    public Animator anim;
+    public bool held = false;
+
     // Use this for initialization
     void Start()
     {
@@ -36,6 +39,8 @@ public class Baby : MonoBehaviour {
         agent = GetComponent<NavMeshAgent>();
 
         agent.destination = target.position;
+
+        anim = transform.Find("char_baby").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -46,6 +51,8 @@ public class Baby : MonoBehaviour {
         {
             this.transform.position = player.holdPosition.transform.position;
             this.transform.rotation = player.holdPosition.transform.rotation;
+
+            
         }
         else
         {
@@ -76,6 +83,8 @@ public class Baby : MonoBehaviour {
 
             //this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z - (1.0f * Time.deltaTime));
         }
+
+        AnimUpdate();
     }
 
     void OnTriggerEnter(Collider _col)
@@ -123,5 +132,26 @@ public class Baby : MonoBehaviour {
         timeSinceRelease = 0.0f;
         agent.enabled = true;
         agent.SetDestination(target.position);
+    }
+
+    public void AnimUpdate()
+    {
+        if (isBeingHeld && !held)
+        {
+            held = true;
+
+            anim.SetBool("held", true);
+
+            Debug.Log("Held");
+        }
+
+        if (!isBeingHeld && held)
+        {
+            held = false;
+
+            anim.SetBool("held", false);
+        }
+        
+        anim.SetFloat("speed", agent.velocity.magnitude);
     }
 }
