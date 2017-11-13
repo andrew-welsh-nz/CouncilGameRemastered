@@ -18,6 +18,7 @@ public class Phone : MonoBehaviour {
     List<string> BadGreetings = new List<string>();
     List<string> BadResponses = new List<string>();
 
+
     private bool Continue = false;
     public bool IsTextFinished = false;
     private bool AlreadyInACall = false;

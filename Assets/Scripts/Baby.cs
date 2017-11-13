@@ -9,6 +9,9 @@ public class Baby : MonoBehaviour {
     Game game;
 
     [SerializeField]
+    SpeechBubble SpeechBubble;
+
+    [SerializeField]
     Transform target;
 
     // Whether the object is being held or not
@@ -51,12 +54,12 @@ public class Baby : MonoBehaviour {
         {
             this.transform.position = player.holdPosition.transform.position;
             this.transform.rotation = player.holdPosition.transform.rotation;
-
-            
+            SpeechBubble.gameObject.SetActive(false);
         }
         else
         {
-            if(!occupied)
+            SpeechBubble.gameObject.SetActive(true);
+            if (!occupied)
             {
                 // The baby doesn't have what it needs, and is going to run for the door
                 if (!agent.enabled)
@@ -78,6 +81,7 @@ public class Baby : MonoBehaviour {
             else
             {
                 // The baby has the needed object, and can stay occupied with it for a bit
+                SpeechBubble.gameObject.SetActive(false);
                 agent.enabled = false;
             }
 

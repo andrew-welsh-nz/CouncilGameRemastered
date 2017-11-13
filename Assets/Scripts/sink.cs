@@ -7,6 +7,9 @@ public class sink : MonoBehaviour
     [SerializeField] GameObject
     WaterObject;
 
+    [SerializeField]
+    SpeechBubble PhoneSpeechBubble;
+
     private bool StartFalling = false;
     private bool ResetTree = false;
     public float TimeToFall;
@@ -38,13 +41,17 @@ public class sink : MonoBehaviour
 
         if (TimeRemaining / TimeToFall <= 0.5f && FlashCooldown >= 0.25f && TimeRemaining > 1.0f)
         {
+            PhoneSpeechBubble.gameObject.SetActive(true);
+           
             if (this.GetComponentInChildren<MeshRenderer>().material.color != RedColor)
             {
                 this.GetComponentInChildren<MeshRenderer>().material.color = RedColor;
+                PhoneSpeechBubble.SetSprite(BubbleImage.SinkFloodingImage);
             }
             else
             {
                 this.GetComponentInChildren<MeshRenderer>().material.color = DefaultColor;
+                PhoneSpeechBubble.SetSprite(BubbleImage.PhoneRingingImage);
             }
             FlashCooldown = 0.0f;
         }
@@ -58,6 +65,7 @@ public class sink : MonoBehaviour
         if (TimeRemaining <= 0.0f)
         {
             //Sink Flooded, add flooding code here
+            PhoneSpeechBubble.gameObject.SetActive(false);
             ResetTree = false;
             StartFalling = false;
             WaterObject.SetActive(true);
@@ -65,6 +73,8 @@ public class sink : MonoBehaviour
 
         if (ResetTree == true)
         {
+            PhoneSpeechBubble.gameObject.SetActive(false);
+            PhoneSpeechBubble.SetSprite(BubbleImage.PhoneRingingImage);
             TimeRemaining = TimeToFall;
             ResetTree = false;
             StartFalling = true;

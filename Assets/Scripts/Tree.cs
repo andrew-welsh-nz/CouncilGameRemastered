@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Tree : MonoBehaviour {
 
-    public Game game;
     private bool StartFalling = false;
     private bool ResetTree = false;
     public float TimeToFall;
@@ -15,6 +14,9 @@ public class Tree : MonoBehaviour {
     private Color RedColor = new Color(1.0f, 0.1f, 0.1f);
     private float FlashCooldown;
     private Quaternion OriginalRotation;
+
+    [SerializeField]
+    SpeechBubble PhoneSpeechBubble;
 
     // Use this for initialization
     void Start () {
@@ -40,13 +42,16 @@ public class Tree : MonoBehaviour {
         }
 
         if (TimeRemaining / TimeToFall <= 0.5f && FlashCooldown >= 0.25f && TimeRemaining > 1.0f) {
+            PhoneSpeechBubble.gameObject.SetActive(true);
             if (this.GetComponentInChildren<MeshRenderer>().material.color != RedColor)
             {
                 this.GetComponentInChildren<MeshRenderer>().material.color = RedColor;
+                PhoneSpeechBubble.SetSprite(BubbleImage.TreeFallingImage);
                 Debug.Log("Changed to Red");
             }
             else {
                 this.GetComponentInChildren<MeshRenderer>().material.color = DefaultColor;
+                PhoneSpeechBubble.SetSprite(BubbleImage.PhoneRingingImage);
                 Debug.Log("Changed to Green");
             }
             FlashCooldown = 0.0f;
@@ -60,12 +65,15 @@ public class Tree : MonoBehaviour {
         }
 
         if (TimeRemaining <= 0.0f) {
+            PhoneSpeechBubble.gameObject.SetActive(false);
             ResetTree = false;
-            StartFalling = true;
+            StartFalling = false;
         }
 
         if (ResetTree == true) {
             TimeRemaining = TimeToFall;
+            PhoneSpeechBubble.gameObject.SetActive(false);
+            PhoneSpeechBubble.SetSprite(BubbleImage.PhoneRingingImage);
             ResetTree = false;
             StartFalling = true;
             this.GetComponentInChildren<MeshRenderer>().material.color = DefaultColor;

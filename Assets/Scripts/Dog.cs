@@ -10,6 +10,9 @@ public class Dog : MonoBehaviour
     Game game;
 
     [SerializeField]
+    SpeechBubble SpeechBubble;
+
+    [SerializeField]
     Transform target;
 
     // Whether the object is being held or not
@@ -67,10 +70,12 @@ public class Dog : MonoBehaviour
         {
             this.transform.position = player.holdPosition.transform.position;
             this.transform.rotation = player.holdPosition.transform.rotation;
+            SpeechBubble.gameObject.SetActive(false);
         }
         else
         {
-            if(!occupied)
+            SpeechBubble.gameObject.SetActive(true);
+            if (!occupied)
             {
                 if (!agent.enabled)
                 {
@@ -91,6 +96,7 @@ public class Dog : MonoBehaviour
             else
             {
                 // The dog occupied by something and will not be moving towards the sofa
+                SpeechBubble.gameObject.SetActive(false);
                 agent.enabled = false;
             }
             
