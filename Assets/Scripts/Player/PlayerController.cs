@@ -48,6 +48,9 @@ public class PlayerController : MonoBehaviour {
     // The current rotation that the player is facing
     Quaternion rot;
 
+    [SerializeField]
+    Interactable[] interactables;
+
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
@@ -108,8 +111,22 @@ public class PlayerController : MonoBehaviour {
             transform.rotation = rot;
         }
 
-        // Interaction Input
-        if(CrossPlatformInputManager.GetButtonDown("Interact" + playerNumber))
+        if (CrossPlatformInputManager.GetButtonDown("Interact" + playerNumber))
+        {
+            interaction.gameObject.SetActive(true);
+        }
+
+        if (CrossPlatformInputManager.GetButtonUp("Interact" + playerNumber))
+        {
+            interaction.gameObject.SetActive(false);
+            for(int i = 0; i < interactables.Length; i++)
+            {
+                interactables[i].isInteracting = false;
+            }
+        }
+
+        // Release Input
+        if (CrossPlatformInputManager.GetButtonDown("Release" + playerNumber))
         {
             //interaction.gameObject.SetActive(true);
             //anim.SetTrigger("attack");

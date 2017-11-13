@@ -61,7 +61,7 @@ public class Tree : MonoBehaviour {
         if (TimeRemaining <= 1.0f && TimeRemaining > 0.0f) {
             Debug.Log("Tree Falling");
             this.GetComponentInChildren<MeshRenderer>().material.color = RedColor;
-            transform.Rotate(-75.0f / 1.0f * Time.deltaTime, 0.0f, 0.0f);
+            transform.Rotate(0.0f, 0.0f, -75.0f / 1.0f * Time.deltaTime);
         }
 
         if (TimeRemaining <= 0.0f) {
