@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour {
 
+    [SerializeField]
+    Game game;
+
     public bool isInteracting = false;
+
+    [SerializeField]
+    float targetPoints = 0.0f;
+
+    float currentPoints;
 
 	// Use this for initialization
 	void Start () {
@@ -13,7 +21,15 @@ public class Interactable : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(isInteracting)
+        {
+            currentPoints += Time.deltaTime;
+        }
+
+        if(currentPoints >= targetPoints)
+        {
+            game.GameOver(3);
+        }
 	}
 
     void OnTriggerEnter(Collider _col)

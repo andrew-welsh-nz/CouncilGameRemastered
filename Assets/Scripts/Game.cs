@@ -97,6 +97,10 @@ public class Game : MonoBehaviour {
                     //Tree has fallen on the house
                     gameoverText.text = "tree fell";
                     break;
+                case 3:
+                    //The player has won the game
+                    gameoverText.text = "you win";
+                    break;
                 default:
                     break;
             }
