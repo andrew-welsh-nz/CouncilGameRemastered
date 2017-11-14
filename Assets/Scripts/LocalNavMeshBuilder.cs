@@ -49,8 +49,8 @@ public class LocalNavMeshBuilder : MonoBehaviour
 
     void UpdateNavMesh(bool asyncUpdate = false)
     {
-        if (UpdateNewNavMesh)
-        {
+        //if (UpdateNewNavMesh)
+        //{
             NavMeshSourceTag.Collect(ref m_Sources);
             var defaultBuildSettings = NavMesh.GetSettingsByID(0);
             var bounds = QuantizedBounds();
@@ -60,8 +60,8 @@ public class LocalNavMeshBuilder : MonoBehaviour
             else
                 NavMeshBuilder.UpdateNavMeshData(m_NavMesh, defaultBuildSettings, m_Sources, bounds);
 
-            UpdateNewNavMesh = false;
-        }
+        //    UpdateNewNavMesh = false;
+       // }
     }
 
     static Vector3 Quantize(Vector3 v, Vector3 quant)
