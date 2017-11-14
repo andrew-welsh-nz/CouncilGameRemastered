@@ -70,7 +70,7 @@ public class Game : MonoBehaviour {
         {
             int DisplayScore = (int)score;
             // The game is over, and the end UI should be shown
-            Debug.Log("GAME OVER");
+            Debug.Log("GAME OVER !");
             Debug.Log("Score: " + DisplayScore.ToString());
 
             gameoverText.gameObject.SetActive(true);
@@ -87,19 +87,19 @@ public class Game : MonoBehaviour {
             {
                 case 0:
                     // Change the text to say the baby left
-                    gameoverText.text = "baby left";
+                    gameoverText.text = "BABY LEFT !";
                     break;
                 case 1:
                     // Change the text to say the dog messed up the sofa
-                    gameoverText.text = "sofa ruined";
+                    gameoverText.text = "SOFA RUINED !";
                     break;
                 case 2:
                     //Tree has fallen on the house
-                    gameoverText.text = "tree fell";
+                    gameoverText.text = "TREE FELL !";
                     break;
                 case 3:
                     //The player has won the game
-                    gameoverText.text = "you win";
+                    gameoverText.text = "YOU WIN !";
                     break;
                 default:
                     break;

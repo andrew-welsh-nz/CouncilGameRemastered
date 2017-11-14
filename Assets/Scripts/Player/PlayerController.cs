@@ -95,16 +95,20 @@ public class PlayerController : MonoBehaviour {
         rb.velocity = (input * moveSpeed);
 
         // Animation - choose whether to play the idle or running animation, then set the playback speed to the player's movement speed
-        anim.SetBool("isMoving", isMoving);
+        //anim.SetBool("isMoving", isMoving);
         anim.SetBool("holding", isHolding);
         anim.SetFloat("speed", (input.magnitude * 2));
 
+        /*
         for(int i = 0; i < modelAnimators.Length; i++)
         {
+            
             modelAnimators[i].SetBool("isMoving", isMoving);
             modelAnimators[i].SetBool("holding", isHolding);
             modelAnimators[i].SetFloat("speed", (input.magnitude * 2));
+            
         }
+        */
 
         // Player Rotation
         if (input != Vector3.zero)
