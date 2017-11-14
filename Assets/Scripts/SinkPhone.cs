@@ -14,6 +14,9 @@ public class SinkPhone : MonoBehaviour {
     List<string> GoodGreetings = new List<string>();
     List<string> GoodResponses = new List<string>();
 
+    [SerializeField]
+    Game MainGame;
+
     private bool Continue = false;
     public bool IsTextFinished = false;
     private bool AlreadyInACall = false;
@@ -70,6 +73,8 @@ public class SinkPhone : MonoBehaviour {
     }
 
     IEnumerator PhoneInteraction() {
+        MainGame.PhoneCallsMade++;
+
         IsTextFinished = false;
         Continue = false;
         GameObject ImmediateHazard = SinkHazard;
@@ -115,7 +120,9 @@ public class SinkPhone : MonoBehaviour {
         TextDisplayWindow.SetActive(false);
 
         ImmediateHazard.GetComponent<sink>().ResetHazard(true);
-        
+
+        MainGame.score += 15.0f;
+
         AlreadyInACall = false;
     }
 

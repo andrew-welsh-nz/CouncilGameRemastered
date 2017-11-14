@@ -24,6 +24,9 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     float deadzone;
 
+    [SerializeField]
+    Game MainGame;
+
     // The position where held items will be placed
     public GameObject holdPosition;
 
@@ -144,18 +147,21 @@ public class PlayerController : MonoBehaviour {
                     isHolding = false;
                     holdingItem.GetComponent<Baby>().Release();
                     holdingItem = null;
+                    MainGame.ObjectsPlaced++;
                 }
                 else if(holdingItem.tag == "Dog")
                 {
                     isHolding = false;
                     holdingItem.GetComponent<Dog>().Release();
                     holdingItem = null;
+                    MainGame.ObjectsPlaced++;
                 }
                 else if(holdingItem.tag == "NeededObject")
                 {
                     isHolding = false;
                     holdingItem.GetComponent<NeededObject>().Release();
                     holdingItem = null;
+                    MainGame.ObjectsPlaced++;
                 }
             }
             else

@@ -10,12 +10,26 @@ public class Game : MonoBehaviour {
     [SerializeField]
     Text gameoverText;
 
+    [SerializeField]
+    Text ObjectsPlacedText;
+
+    [SerializeField]
+    Text PhoneCallsMadeText;
+    
+    [SerializeField]
+    Text DistractionsCausedText;
+
     // Bools to check if it is time to return to the menu
     bool inGame;
     bool gameOverTimerStarted = false;
 
     // The score of the player
-    float score;
+    public float score;
+    public int ObjectsPlaced = 0;
+    public int PhoneCallsMade = 0;
+    public int DistractionsCaused = 0;
+
+    private float TimeScore;
 
     // The time passed since the game began
     float TimePassed;
@@ -32,8 +46,8 @@ public class Game : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        TimePassed += Time.deltaTime;
-        score = (int)TimePassed;
+        if(!gameOverTimerStarted)
+            score += Time.deltaTime;
 
         if(!inGame && !gameOverTimerStarted)
         {
@@ -54,11 +68,18 @@ public class Game : MonoBehaviour {
     {
         if(inGame)
         {
+            int DisplayScore = (int)score;
             // The game is over, and the end UI should be shown
             Debug.Log("GAME OVER");
-            Debug.Log("Score: " + score.ToString());
+            Debug.Log("Score: " + DisplayScore.ToString());
 
             gameoverText.gameObject.SetActive(true);
+            ObjectsPlacedText.gameObject.SetActive(true);
+            ObjectsPlacedText.text = "Objects Placed: " + ObjectsPlaced.ToString();
+            PhoneCallsMadeText.gameObject.SetActive(true);
+            PhoneCallsMadeText.text = "Phone Calls Made: " + PhoneCallsMade.ToString();
+            DistractionsCausedText.gameObject.SetActive(true);
+            DistractionsCausedText.text = "Distractions Caused: " + DistractionsCaused.ToString();
 
             inGame = false;
 

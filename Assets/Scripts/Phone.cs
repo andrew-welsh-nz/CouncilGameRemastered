@@ -11,13 +11,11 @@ public class Phone : MonoBehaviour {
     public GameObject TreeHazard;
     public GameObject DisplayIconObject;
     public Texture GoodIcon;
-    public Texture BadIcon;
-    List<GameObject> Hazards;
     List<string> GoodGreetings = new List<string>();
     List<string> GoodResponses = new List<string>();
-    List<string> BadGreetings = new List<string>();
-    List<string> BadResponses = new List<string>();
 
+    [SerializeField]
+    Game MainGame;
 
     private bool Continue = false;
     public bool IsTextFinished = false;
@@ -32,18 +30,10 @@ public class Phone : MonoBehaviour {
 
         DefaultColor = this.GetComponent<MeshRenderer>().material.color;
 
-        //Load Hazards into list
-        Hazards = new List<GameObject>();
-        Hazards.Add(WaterPipeHazard);
-        Hazards.Add(TreeHazard);
 
 
         GoodGreetings.Add("Thank you for contacting the Council, How can we help you today?");
-        GoodResponses.Add("HAZARD, we'll send help right away! Have a good day");
-
-        BadGreetings.Add("This is the Council, What problem can we help you with today?");
-        BadResponses.Add("HAZARD, we'll inform who can help as soon as possible. Goodbye");
-
+        GoodResponses.Add("HAZARD we'll send help right away! Have a good day");
     }
 	
 	// Update is called once per frame
@@ -92,6 +82,8 @@ public class Phone : MonoBehaviour {
         //      -Reverse the animation? also the speed of it is based on its time value (which now goes up)
         //      -Free PhoneIsInUse Bool after this action is complete.
 
+        MainGame.PhoneCallsMade++;
+
         IsTextFinished = false;
         Continue = false;   
         GameObject ImmediateHazard;
@@ -110,109 +102,53 @@ public class Phone : MonoBehaviour {
         RawImage DisplayIcon = DisplayIconObject.GetComponent<RawImage>();
         TypeWritter TextTypeWritter = TextDisplayWindow.GetComponentInChildren<TypeWritter>();
 
-        if (Random.Range(1, 100) >= 35)
-        {
-            //Good Call will happen
-            Debug.Log("Good Call Occured");
-            TextDisplayWindow.SetActive(true);
-            TextDisplayWindow.GetComponent<RawImage>().color = new Color(1.0f, 1.0f, 1.0f);
-            TextTypeWritter.IsTextGood = true;
+        //Good Call will happen
+        Debug.Log("Good Call Occured");
+        TextDisplayWindow.SetActive(true);
+        TextDisplayWindow.GetComponent<RawImage>().color = new Color(1.0f, 1.0f, 1.0f);
+        TextTypeWritter.IsTextGood = true;
 
-            TextTypeWritter.fullText = GoodGreetings[Random.Range(0, GoodGreetings.Count)];
-            TextTypeWritter.TypeText();
+        TextTypeWritter.fullText = GoodGreetings[Random.Range(0, GoodGreetings.Count)];
+        TextTypeWritter.TypeText();
        
-            DisplayIcon.texture = GoodIcon;
+        DisplayIcon.texture = GoodIcon;
 
-            //Waits until Continue == true
-            yield return new WaitUntil(() => Continue == true); 
-            Continue = false;
+        //Waits until Continue == true
+        yield return new WaitUntil(() => Continue == true); 
+        Continue = false;
 
-            yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.5f);
 
-            string ResponseText = GoodResponses[Random.Range(0, GoodResponses.Count)];
-            if (ResponseText.Contains("HAZARD"))
-            {
-                if (ImmediateHazard.name == "tree") {
-                    ResponseText = ResponseText.Replace("HAZARD", "A falling tree?");
-                }
-                else {
-                    ResponseText = ResponseText.Replace("HAZARD", "A pipe is about to burst?");
-                }
-            }
-
-            TextTypeWritter.fullText = ResponseText;
-            TextTypeWritter.TypeText();
-
-            yield return new WaitUntil(() => Continue == true);
-            Continue = false;
-
-            yield return new WaitForSeconds(0.5f);
-
-            //Dialog Finished, Reset Variables and Handle fixing the Hazard
-            IsTextFinished = false;
-            TextDisplayWindow.SetActive(false);
-
+        string ResponseText = GoodResponses[Random.Range(0, GoodResponses.Count)];
+        if (ResponseText.Contains("HAZARD"))
+        {
             if (ImmediateHazard.name == "tree") {
-                Debug.Log("Reset Tree Called");
-                ImmediateHazard.GetComponent<Tree>().ResetHazard(true);
+                ResponseText = ResponseText.Replace("HAZARD", "A falling tree?");
             }
-
-        }
-        else {
-            //Bad call will happen
-            Debug.Log("Bad Call Occured");
-            TextDisplayWindow.SetActive(true);
-            TextDisplayWindow.GetComponent<RawImage>().color = new Color(0.8f, 0.2f, 0.2f);
-            TextTypeWritter.IsTextGood = false;
-
-            TextTypeWritter.TextDelay = TextTypeWritter.TextDelay * 2;
-
-            TextTypeWritter.fullText = BadGreetings[Random.Range(0, BadGreetings.Count)];
-            TextTypeWritter.TypeText();
-            DisplayIcon.texture = BadIcon;
-
-            //Waits until Continue == true
-            yield return new WaitUntil(() => Continue == true);
-            Continue = false;
-
-            yield return new WaitForSeconds(1.0f);
-
-            string ResponseText = BadResponses[Random.Range(0, BadResponses.Count)];
-            if (ResponseText.Contains("HAZARD"))
-            {
-                if (ImmediateHazard.name == "tree")
-                {
-                    ResponseText = ResponseText.Replace("HAZARD", "A falling tree?");
-                }
-                else
-                {
-                    ResponseText = ResponseText.Replace("HAZARD", "A pipe is about to burst?");
-                }
-            }
-
-            TextTypeWritter.fullText = ResponseText;
-            TextTypeWritter.TypeText();
-
-            yield return new WaitUntil(() => Continue == true);
-            Continue = false;
-
-            yield return new WaitForSeconds(1.0f);
-
-            //Dialog Finished, Reset Variables and Handle fixing the Hazard
-            IsTextFinished = false;
-            TextDisplayWindow.SetActive(false);
-            TextTypeWritter.TextDelay = TextTypeWritter.TextDelay / 2;
-
-            if (ImmediateHazard.name == "tree")
-            {
-                Debug.Log("Reset Tree Called");
-                ImmediateHazard.GetComponent<Tree>().ResetHazard(false);
+            else {
+                ResponseText = ResponseText.Replace("HAZARD", "A pipe is about to burst?");
             }
         }
+
+        TextTypeWritter.fullText = ResponseText;
+        TextTypeWritter.TypeText();
+
+        yield return new WaitUntil(() => Continue == true);
+        Continue = false;
+
+        yield return new WaitForSeconds(0.5f);
+
+        //Dialog Finished, Reset Variables and Handle fixing the Hazard
+        IsTextFinished = false;
+        TextDisplayWindow.SetActive(false);
+
+        if (ImmediateHazard.name == "tree") {
+            Debug.Log("Reset Tree Called");
+            ImmediateHazard.GetComponent<Tree>().ResetHazard(true);
+        }
+
+        MainGame.score += 15.0f;
+
         AlreadyInACall = false;
     }
-
-
-
-
 }

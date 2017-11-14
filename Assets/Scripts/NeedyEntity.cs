@@ -15,6 +15,9 @@ public class NeedyEntity : MonoBehaviour {
     Baby babyEntity = null;
     Dog dogEntity = null;
 
+    [SerializeField]
+    Game MainGame;
+
     GameObject CurrentNeededObject = null;
 
 	// Use this for initialization
@@ -81,6 +84,9 @@ public class NeedyEntity : MonoBehaviour {
         //    ThrowZVelocity *= -1.0f;
 
         //CurrentNeededObject.GetComponent<Rigidbody>().AddForce(new Vector3(ThrowXVelocity, 2.5f, ThrowZVelocity) * ThrownStrength);
+
+        MainGame.score += 10.0f;
+        MainGame.DistractionsCaused++;
 
         CurrentNeededObject.GetComponent<NeededObject>().SetCanBeUsed(false);
 

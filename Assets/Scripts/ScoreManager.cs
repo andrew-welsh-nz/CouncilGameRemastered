@@ -8,6 +8,9 @@ public class ScoreManager : MonoBehaviour {
     public Font FontToUse;
     public float TextSize;
 
+    [SerializeField]
+    Game MainGame;
+
     private int Score;
     private float TimePassed;
     private RectTransform ThisTransform;
@@ -25,9 +28,7 @@ public class ScoreManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        TimePassed += Time.deltaTime;
-        Score = (int)TimePassed;
-
-        this.GetComponent<Text>().text = "Score: " + Score.ToString();
+        int DisplayScore = (int)MainGame.score;
+        this.GetComponent<Text>().text = "Score: " + DisplayScore.ToString();
 	}
 }
