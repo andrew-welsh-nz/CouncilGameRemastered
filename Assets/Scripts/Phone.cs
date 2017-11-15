@@ -30,35 +30,40 @@ public class Phone : MonoBehaviour {
 
         DefaultColor = this.GetComponent<MeshRenderer>().material.color;
 
-
-
         GoodGreetings.Add("Thank you for contacting the Council, How can we help you today?");
         GoodResponses.Add("HAZARD we'll send help right away! Have a good day");
+
     }
 	
 	// Update is called once per frame
 	void Update () {
-        FlashCooldown += Time.deltaTime;
+        if (!MainGame.IsPaused)
+        {
+            FlashCooldown += Time.deltaTime;
 
-        if (IsTextFinished == true) {
+            if (IsTextFinished == true)
+            {
                 IsTextFinished = false;
                 Continue = true;
-         }
-
-        if (TreeHazard.GetComponent<Tree>().GetTimeRemaining() / TreeHazard.GetComponent<Tree>().TimeToFall <= 0.5f && FlashCooldown >= 0.25f && TreeHazard.GetComponent<Tree>().GetTimeRemaining() > 0.0f) {
-            FlashCooldown = 0.0f;
-            if (this.GetComponentInChildren<MeshRenderer>().material.color != WhiteColor)
-            {
-                this.GetComponentInChildren<MeshRenderer>().material.color = WhiteColor;
             }
-            else
+
+            if (TreeHazard.GetComponent<Tree>().GetTimeRemaining() / TreeHazard.GetComponent<Tree>().TimeToFall <= 0.5f && FlashCooldown >= 0.25f && TreeHazard.GetComponent<Tree>().GetTimeRemaining() > 0.0f)
+            {
+                FlashCooldown = 0.0f;
+                if (this.GetComponentInChildren<MeshRenderer>().material.color != WhiteColor)
+                {
+                    this.GetComponentInChildren<MeshRenderer>().material.color = WhiteColor;
+                }
+                else
+                {
+                    this.GetComponentInChildren<MeshRenderer>().material.color = DefaultColor;
+                }
+            }
+
+            if (TreeHazard.GetComponent<Tree>().GetTimeRemaining() / TreeHazard.GetComponent<Tree>().TimeToFall > 0.5f)
             {
                 this.GetComponentInChildren<MeshRenderer>().material.color = DefaultColor;
             }
-        }
-
-        if (TreeHazard.GetComponent<Tree>().GetTimeRemaining() / TreeHazard.GetComponent<Tree>().TimeToFall > 0.5f) {
-            this.GetComponentInChildren<MeshRenderer>().material.color = DefaultColor;
         }
     }
 

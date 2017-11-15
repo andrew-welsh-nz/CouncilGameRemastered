@@ -37,27 +37,33 @@ public class SinkPhone : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        FlashCooldown += Time.deltaTime;
+        if (!MainGame.IsPaused)
+        {
+            FlashCooldown += Time.deltaTime;
 
-        if (IsTextFinished == true) {
+            if (IsTextFinished == true)
+            {
                 IsTextFinished = false;
                 Continue = true;
-         }
-
-        if (SinkHazard.GetComponent<sink>().GetTimeRemaining() / SinkHazard.GetComponent<sink>().TimeToFall <= 0.5f && FlashCooldown >= 0.25f && SinkHazard.GetComponent<sink>().TimeRemaining > 0.0f) {
-            FlashCooldown = 0.0f;
-            if (this.GetComponentInChildren<MeshRenderer>().material.color != WhiteColor)
-            {
-                this.GetComponentInChildren<MeshRenderer>().material.color = WhiteColor;
             }
-            else
+
+            if (SinkHazard.GetComponent<sink>().GetTimeRemaining() / SinkHazard.GetComponent<sink>().TimeToFall <= 0.5f && FlashCooldown >= 0.25f && SinkHazard.GetComponent<sink>().TimeRemaining > 0.0f)
+            {
+                FlashCooldown = 0.0f;
+                if (this.GetComponentInChildren<MeshRenderer>().material.color != WhiteColor)
+                {
+                    this.GetComponentInChildren<MeshRenderer>().material.color = WhiteColor;
+                }
+                else
+                {
+                    this.GetComponentInChildren<MeshRenderer>().material.color = DefaultColor;
+                }
+            }
+
+            if (SinkHazard.GetComponent<sink>().GetTimeRemaining() / SinkHazard.GetComponent<sink>().TimeToFall > 0.5f)
             {
                 this.GetComponentInChildren<MeshRenderer>().material.color = DefaultColor;
             }
-        }
-
-        if (SinkHazard.GetComponent<sink>().GetTimeRemaining() / SinkHazard.GetComponent<sink>().TimeToFall > 0.5f) {
-            this.GetComponentInChildren<MeshRenderer>().material.color = DefaultColor;
         }
     }
 

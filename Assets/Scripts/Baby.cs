@@ -22,6 +22,9 @@ public class Baby : MonoBehaviour {
     [SerializeField]
     PlayerController player;
 
+    [SerializeField]
+    Game MainGame;
+
     // The rigidbody attached to the item
     Rigidbody rb;
 
@@ -41,6 +44,8 @@ public class Baby : MonoBehaviour {
     [SerializeField]
     float timeToBeInBedroom = 0.0f;
 
+    float OriginalSpeed;
+
     // Use this for initialization
     void Start()
     {
@@ -50,63 +55,73 @@ public class Baby : MonoBehaviour {
         agent.destination = target.position;
 
         anim = transform.Find("char_baby").GetComponent<Animator>();
+
+        OriginalSpeed = agent.speed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Move the item to the correct position if it is being held
-        if (isBeingHeld)
+        if (!MainGame.IsPaused)
         {
-            this.transform.position = player.holdPosition.transform.position;
-            this.transform.rotation = player.holdPosition.transform.rotation;
-            SpeechBubble.gameObject.SetActive(false);
-        }
-        else
-        {
-            SpeechBubble.gameObject.SetActive(true);
-            if (!occupied && !isInBedroom)
+            agent.speed = OriginalSpeed;
+            // Move the item to the correct position if it is being held
+            if (isBeingHeld)
             {
-                // The baby doesn't have what it needs, and is going to run for the door
-                if (!agent.enabled)
-                {
-                    agent.enabled = true;
-                    agent.SetDestination(target.position);
-                }
-                if (timeSinceRelease >= 2.5f && !collisionReset)
-                {
-                    Debug.Log("Allowing collisions again");
-                    Physics.IgnoreCollision(GetComponent<Collider>(), player.GetComponent<Collider>(), false);
-                    collisionReset = true;
-                }
-                else
-                {
-                    timeSinceRelease += Time.deltaTime;
-                }
+                this.transform.position = player.holdPosition.transform.position;
+                this.transform.rotation = player.holdPosition.transform.rotation;
+                SpeechBubble.gameObject.SetActive(false);
             }
             else
             {
-                // The baby has the needed object, and can stay occupied with it for a bit
-                SpeechBubble.gameObject.SetActive(false);
-                agent.enabled = false;
-            }
-
-            if (isInBedroom)
-            {
-                agent.enabled = false;
-                // Wait for some time then disable isOutside
-                timeInBedroom += Time.deltaTime;
-                if (timeInBedroom >= timeToBeInBedroom)
+                SpeechBubble.gameObject.SetActive(true);
+                if (!occupied && !isInBedroom)
                 {
-                    isInBedroom = false;
-                    timeInBedroom = 0.0f;
+                    // The baby doesn't have what it needs, and is going to run for the door
+                    if (!agent.enabled)
+                    {
+                        agent.enabled = true;
+                        agent.SetDestination(target.position);
+                    }
+                    if (timeSinceRelease >= 2.5f && !collisionReset)
+                    {
+                        Debug.Log("Allowing collisions again");
+                        Physics.IgnoreCollision(GetComponent<Collider>(), player.GetComponent<Collider>(), false);
+                        collisionReset = true;
+                    }
+                    else
+                    {
+                        timeSinceRelease += Time.deltaTime;
+                    }
                 }
+                else
+                {
+                    // The baby has the needed object, and can stay occupied with it for a bit
+                    SpeechBubble.gameObject.SetActive(false);
+                    agent.enabled = false;
+                }
+
+                if (isInBedroom)
+                {
+                    agent.enabled = false;
+                    // Wait for some time then disable isOutside
+                    timeInBedroom += Time.deltaTime;
+                    if (timeInBedroom >= timeToBeInBedroom)
+                    {
+                        isInBedroom = false;
+                        timeInBedroom = 0.0f;
+                    }
+                }
+
+                //this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z - (1.0f * Time.deltaTime));
             }
 
-            //this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z - (1.0f * Time.deltaTime));
+            AnimUpdate();
         }
-
-        AnimUpdate();
+        else
+        {
+            agent.speed = 0.0f;
+        }
     }
 
     void OnTriggerEnter(Collider _col)
@@ -127,7 +142,7 @@ public class Baby : MonoBehaviour {
     private void OnCollisionEnter(Collision _col)
     {
         // If the item collides with the owner of the store, set it to be held and ignore any further collisions with the player
-        if (_col.gameObject.tag == "Player" && !player.isHolding)
+        if (_col.gameObject.tag == "Player" && !player.isHolding && !occupied)
         {
             agent.enabled = false;
             isBeingHeld = true;
