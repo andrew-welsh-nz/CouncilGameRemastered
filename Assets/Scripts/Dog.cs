@@ -44,6 +44,12 @@ public class Dog : MonoBehaviour
 
     Animator anim;
 
+    bool isOutside = false;
+    float timeOutside = 0.0f;
+
+    [SerializeField]
+    float timeToBeOustide = 0.0f;
+
     // Use this for initialization
     void Start()
     {
@@ -75,7 +81,7 @@ public class Dog : MonoBehaviour
         else
         {
             SpeechBubble.gameObject.SetActive(true);
-            if (!occupied)
+            if (!occupied && !isOutside)
             {
                 if (!agent.enabled)
                 {
@@ -112,6 +118,18 @@ public class Dog : MonoBehaviour
             {
                 game.GameOver(1);
             }
+
+            if(isOutside)
+            {
+                agent.enabled = false;
+                // Wait for some time then disable isOutside
+                timeOutside += Time.deltaTime;
+                if(timeOutside >= timeToBeOustide)
+                {
+                    isOutside = false;
+                    timeOutside = 0.0f;
+                }
+            }
         }
     }
 
@@ -125,6 +143,10 @@ public class Dog : MonoBehaviour
             isAtSofa = true;
             sofa.Play();
             anim.SetTrigger("interact");
+        }
+        else if (_col.gameObject.tag == "Outside")
+        {
+            isOutside = true;
         }
     }
 
