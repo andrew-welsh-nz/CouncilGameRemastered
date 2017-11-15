@@ -19,6 +19,23 @@ public class Game : MonoBehaviour {
     [SerializeField]
     Text DistractionsCausedText;
 
+    public CameraPan MainCamera;
+
+    [SerializeField]
+    Transform BabyObject;
+
+    [SerializeField]
+    Transform DoorTrigger;
+
+    [SerializeField]
+    Transform DogObject;
+
+    [SerializeField]
+    Transform SofaTrigger;
+
+    [SerializeField]
+    Transform Dishes;
+
     // Bools to check if it is time to return to the menu
     bool inGame;
     bool gameOverTimerStarted = false;
@@ -31,6 +48,8 @@ public class Game : MonoBehaviour {
 
     private float TimeScore;
 
+    public bool IsPaused = false;
+
     // The time passed since the game began
     float TimePassed;
 
@@ -42,7 +61,13 @@ public class Game : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         inGame = true;
-	}
+
+        MainCamera.AddPositionToList(BabyObject.position);
+        MainCamera.AddPositionToList(DoorTrigger.position);
+        MainCamera.AddPositionToList(DogObject.position);
+        MainCamera.AddPositionToList(SofaTrigger.position + new Vector3(0.0f, 0.0f, 2.5f));
+        MainCamera.AddPositionToList(Dishes.position);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -88,10 +113,12 @@ public class Game : MonoBehaviour {
                 case 0:
                     // Change the text to say the baby left
                     gameoverText.text = "BABY LEFT !";
+                    MainCamera.AddFinalPositionToList(DoorTrigger.position);
                     break;
                 case 1:
                     // Change the text to say the dog messed up the sofa
                     gameoverText.text = "SOFA RUINED !";
+                    MainCamera.AddFinalPositionToList(SofaTrigger.position + new Vector3(0.0f, 0.0f, 2.5f));
                     break;
                 case 2:
                     //Tree has fallen on the house
@@ -100,10 +127,13 @@ public class Game : MonoBehaviour {
                 case 3:
                     //The player has won the game
                     gameoverText.text = "YOU WIN !";
+                    MainCamera.AddFinalPositionToList(Dishes.position);
                     break;
                 default:
                     break;
             }
         }
     }
+
+
 }

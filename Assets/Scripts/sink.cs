@@ -10,6 +10,9 @@ public class sink : MonoBehaviour
     [SerializeField]
     SpeechBubble PhoneSpeechBubble;
 
+    [SerializeField]
+    Game MainGame;
+
     private bool StartFalling = false;
     private bool ResetTree = false;
     public float TimeToFall;
@@ -36,56 +39,57 @@ public class sink : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        FlashCooldown += Time.deltaTime;
-
-        if (TimeRemaining / TimeToFall <= 0.5f && FlashCooldown >= 0.25f && TimeRemaining > 1.0f)
+        if (!MainGame.IsPaused)
         {
-            PhoneSpeechBubble.gameObject.SetActive(true);
-           
-            if (this.GetComponentInChildren<MeshRenderer>().material.color != RedColor)
+            FlashCooldown += Time.deltaTime;
+
+            if (TimeRemaining / TimeToFall <= 0.5f && FlashCooldown >= 0.25f && TimeRemaining > 1.0f)
+            {
+                PhoneSpeechBubble.gameObject.SetActive(true);
+
+                if (this.GetComponentInChildren<MeshRenderer>().material.color != RedColor)
+                {
+                    this.GetComponentInChildren<MeshRenderer>().material.color = RedColor;
+                    PhoneSpeechBubble.SetSprite(BubbleImage.SinkFloodingImage);
+                }
+                else
+                {
+                    this.GetComponentInChildren<MeshRenderer>().material.color = DefaultColor;
+                    PhoneSpeechBubble.SetSprite(BubbleImage.PhoneRingingImage);
+                }
+                FlashCooldown = 0.0f;
+            }
+
+            //3 Seconds left, start falling
+            if (TimeRemaining <= 1.0f)
             {
                 this.GetComponentInChildren<MeshRenderer>().material.color = RedColor;
-                PhoneSpeechBubble.SetSprite(BubbleImage.SinkFloodingImage);
             }
-            else
+
+            if (TimeRemaining <= 0.0f)
             {
-                this.GetComponentInChildren<MeshRenderer>().material.color = DefaultColor;
-                PhoneSpeechBubble.SetSprite(BubbleImage.PhoneRingingImage);
+                //Sink Flooded, add flooding code here
+                PhoneSpeechBubble.gameObject.SetActive(false);
+                ResetTree = false;
+                StartFalling = false;
+                WaterObject.SetActive(true);
             }
-            FlashCooldown = 0.0f;
-        }
 
-        //3 Seconds left, start falling
-        if (TimeRemaining <= 1.0f)
-        {
-            this.GetComponentInChildren<MeshRenderer>().material.color = RedColor;
+            if (ResetTree == true)
+            {
+                PhoneSpeechBubble.gameObject.SetActive(false);
+                PhoneSpeechBubble.SetSprite(BubbleImage.PhoneRingingImage);
+                TimeRemaining = TimeToFall;
+                ResetTree = false;
+                StartFalling = true;
+                this.GetComponentInChildren<MeshRenderer>().material.color = DefaultColor;
+                transform.rotation = Quaternion.Slerp(transform.rotation, OriginalRotation, Time.time * 0.5f);
+            }
+            else if (StartFalling == true)
+            {
+                TimeRemaining -= Time.deltaTime;
+            }
         }
-
-        if (TimeRemaining <= 0.0f)
-        {
-            //Sink Flooded, add flooding code here
-            PhoneSpeechBubble.gameObject.SetActive(false);
-            ResetTree = false;
-            StartFalling = false;
-            WaterObject.SetActive(true);
-        }
-
-        if (ResetTree == true)
-        {
-            PhoneSpeechBubble.gameObject.SetActive(false);
-            PhoneSpeechBubble.SetSprite(BubbleImage.PhoneRingingImage);
-            TimeRemaining = TimeToFall;
-            ResetTree = false;
-            StartFalling = true;
-            this.GetComponentInChildren<MeshRenderer>().material.color = DefaultColor;
-            transform.rotation = Quaternion.Slerp(transform.rotation, OriginalRotation, Time.time * 0.5f);
-        }
-        else if (StartFalling == true)
-        {
-            TimeRemaining -= Time.deltaTime;
-        }
-
     }
 
     public float GetTimeRemaining()

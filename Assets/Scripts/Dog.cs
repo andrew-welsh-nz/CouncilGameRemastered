@@ -13,6 +13,9 @@ public class Dog : MonoBehaviour
     SpeechBubble SpeechBubble;
 
     [SerializeField]
+    Game MainGame;
+
+    [SerializeField]
     Transform target;
 
     // Whether the object is being held or not
@@ -50,6 +53,8 @@ public class Dog : MonoBehaviour
     [SerializeField]
     float timeToBeOustide = 0.0f;
 
+    float OriginalSpeed;
+
     // Use this for initialization
     void Start()
     {
@@ -60,76 +65,86 @@ public class Dog : MonoBehaviour
         sofa.Stop();
 
         anim = GetComponent<Animator>();
+        OriginalSpeed = agent.speed;
+
+       // MainGame.MainCamera.AddPositionToList(this.transform.position);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        anim.SetFloat("speed", agent.velocity.magnitude);
-        anim.SetBool("held", isBeingHeld);
-
-        Debug.Log("Speed:  " + agent.velocity.magnitude);
-
-        // Move the item to the correct position if it is being held
-        if (isBeingHeld)
+        if (!MainGame.IsPaused)
         {
-            this.transform.position = player.holdPosition.transform.position;
-            this.transform.rotation = player.holdPosition.transform.rotation;
-            SpeechBubble.gameObject.SetActive(false);
-        }
-        else
-        {
-            SpeechBubble.gameObject.SetActive(true);
-            if (!occupied && !isOutside)
+            agent.speed = OriginalSpeed;
+            anim.SetFloat("speed", agent.velocity.magnitude);
+            anim.SetBool("held", isBeingHeld);
+
+            Debug.Log("Speed:  " + agent.velocity.magnitude);
+
+            // Move the item to the correct position if it is being held
+            if (isBeingHeld)
             {
-                if (!agent.enabled)
-                {
-                    agent.enabled = true;
-                    agent.SetDestination(target.position);
-                }
-                if (timeSinceRelease >= 2.5f && !collisionReset)
-                {
-                    Debug.Log("Allowing collisions again");
-                    Physics.IgnoreCollision(GetComponent<Collider>(), player.GetComponent<Collider>(), false);
-                    collisionReset = true;
-                }
-                else
-                {
-                    timeSinceRelease += Time.deltaTime;
-                }
+                this.transform.position = player.holdPosition.transform.position;
+                this.transform.rotation = player.holdPosition.transform.rotation;
+                SpeechBubble.gameObject.SetActive(false);
             }
             else
             {
-                // The dog occupied by something and will not be moving towards the sofa
-                SpeechBubble.gameObject.SetActive(false);
-                agent.enabled = false;
-            }
-            
-
-            //this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z - (1.0f * Time.deltaTime));
-
-            if(isAtSofa)
-            {
-                timeAtSofa += Time.deltaTime;
-            }
-
-            if(timeAtSofa >= timeToDestroy)
-            {
-                game.GameOver(1);
-            }
-
-            if(isOutside)
-            {
-                agent.enabled = false;
-                // Wait for some time then disable isOutside
-                timeOutside += Time.deltaTime;
-                if(timeOutside >= timeToBeOustide)
+                SpeechBubble.gameObject.SetActive(true);
+                if (!occupied && !isOutside)
                 {
-                    isOutside = false;
-                    timeOutside = 0.0f;
+                    if (!agent.enabled)
+                    {
+                        agent.enabled = true;
+                        agent.SetDestination(target.position);
+                    }
+                    if (timeSinceRelease >= 2.5f && !collisionReset)
+                    {
+                        Debug.Log("Allowing collisions again");
+                        Physics.IgnoreCollision(GetComponent<Collider>(), player.GetComponent<Collider>(), false);
+                        collisionReset = true;
+                    }
+                    else
+                    {
+                        timeSinceRelease += Time.deltaTime;
+                    }
+                }
+                else
+                {
+                    // The dog occupied by something and will not be moving towards the sofa
+                    SpeechBubble.gameObject.SetActive(false);
+                    agent.enabled = false;
+                }
+
+
+                //this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z - (1.0f * Time.deltaTime));
+
+                if (isAtSofa)
+                {
+                    timeAtSofa += Time.deltaTime;
+                }
+
+                if (timeAtSofa >= timeToDestroy)
+                {
+                    game.GameOver(1);
+                }
+
+                if (isOutside)
+                {
+                    agent.enabled = false;
+                    // Wait for some time then disable isOutside
+                    timeOutside += Time.deltaTime;
+                    if (timeOutside >= timeToBeOustide)
+                    {
+                        isOutside = false;
+                        timeOutside = 0.0f;
+                    }
                 }
             }
+        }
+        else {
+            agent.speed = 0.0f;
         }
     }
 
@@ -153,7 +168,7 @@ public class Dog : MonoBehaviour
     private void OnCollisionEnter(Collision _col)
     {
         // If the item collides with the owner of the store, set it to be held and ignore any further collisions with the player
-        if (_col.gameObject.tag == "Player" && !player.isHolding)
+        if (_col.gameObject.tag == "Player" && !player.isHolding && !occupied)
         {
             agent.enabled = false;
             isBeingHeld = true;
