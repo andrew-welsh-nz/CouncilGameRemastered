@@ -54,13 +54,15 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     Interactable[] interactables;
 
-    float OriginalMoveSpeed;
+    float CurrentMoveSpeed;
+
+    bool UnpauseTriggered = false;
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
         anim = transform.Find("char_player").GetComponent<Animator>();
-        OriginalMoveSpeed = moveSpeed;
+        CurrentMoveSpeed = moveSpeed;
 
     }
 	
@@ -69,10 +71,15 @@ public class PlayerController : MonoBehaviour {
         if (MainGame.IsPaused)
         {
             moveSpeed = 0.0f;
+            UnpauseTriggered = true;
         }
         else
         {
-            moveSpeed = OriginalMoveSpeed;
+            if (UnpauseTriggered)
+            {
+                moveSpeed = CurrentMoveSpeed;
+                UnpauseTriggered = false;
+            }
             // Check whether the stick is outside of the deadzone. When using a keyboard it will always be over this
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             float v = CrossPlatformInputManager.GetAxis("Vertical");
