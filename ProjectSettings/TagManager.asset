@@ -12,6 +12,7 @@ TagManager:
   - Phone
   - NeededObject
   - Water
+  - Bedroom
   layers:
   - Default
   - TransparentFX

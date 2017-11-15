@@ -35,6 +35,12 @@ public class Baby : MonoBehaviour {
     public Animator anim;
     public bool held = false;
 
+    bool isInBedroom = false;
+    float timeInBedroom = 0.0f;
+
+    [SerializeField]
+    float timeToBeInBedroom = 0.0f;
+
     // Use this for initialization
     void Start()
     {
@@ -59,7 +65,7 @@ public class Baby : MonoBehaviour {
         else
         {
             SpeechBubble.gameObject.SetActive(true);
-            if (!occupied)
+            if (!occupied && !isInBedroom)
             {
                 // The baby doesn't have what it needs, and is going to run for the door
                 if (!agent.enabled)
@@ -85,6 +91,18 @@ public class Baby : MonoBehaviour {
                 agent.enabled = false;
             }
 
+            if (isInBedroom)
+            {
+                agent.enabled = false;
+                // Wait for some time then disable isOutside
+                timeInBedroom += Time.deltaTime;
+                if (timeInBedroom >= timeToBeInBedroom)
+                {
+                    isInBedroom = false;
+                    timeInBedroom = 0.0f;
+                }
+            }
+
             //this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z - (1.0f * Time.deltaTime));
         }
 
@@ -99,6 +117,10 @@ public class Baby : MonoBehaviour {
             //Debug.Log("~~~~GAME OVER~~~~");
 
             game.GameOver(0);
+        }
+        else if (_col.gameObject.tag == "Bedroom")
+        {
+            isInBedroom = true;
         }
     }
 
